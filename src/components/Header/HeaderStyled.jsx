@@ -9,6 +9,7 @@ export const Head = styled.div`
     max-width: 100%;
     background-color: dodgerblue; 
     padding: 1rem;
+    height: 12vh;
     
     img {
         width: 5.5rem;

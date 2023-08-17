@@ -1,4 +1,4 @@
-import { Nav } from "./NavBarStyled";
+import { Nav } from "./NavBarStyled"
 
 export function NavBar() {
     return (
