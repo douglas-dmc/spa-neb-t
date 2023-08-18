@@ -7,7 +7,10 @@ export function Header() {
             <Head>
                 <img src={ctex} alt="ctex" />
                 <div>
-                    <p>Normas Técnicas do Exército Brasileiro (NEB/T)</p>
+                    <p>
+                        Sistema de Normas Técnicas do Exército Brasileiro -{" "}
+                        <i>SisNEB</i>
+                    </p>
                 </div>
             </Head>
         </>

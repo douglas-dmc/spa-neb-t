@@ -17,15 +17,35 @@ export const Nav = styled.nav`
 
     li {
         display: inline-flex;
-        width: 70px;
+        justify-content: center;
+        width: 100px;
         padding: 10px 15px;
         font-size: 1rem;
         cursor: pointer;
+        border-right: 1px solid #fff;
     }
 
-    li:hover {
+    li:first-child {
+        margin-left: 50px;
+        border-left: 1px solid #fff;
+    }
+
+    li:not(:last-child):hover {
         background-color: #fff;
         color: #000;
         font-weight: bold;
+    }
+
+    li:last-child {
+        border-right: none;
+        width: 30%;
+        float: right;
+        margin-right: 70px;
+        align-content: center;
+        cursor: context-menu;
+    }
+
+    li i {
+        margin-right: 10px;
     }
 `
