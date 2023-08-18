@@ -30,15 +30,16 @@ export function Cadastro() {
                 ></textarea>
                 {errors.objetivo && <span>Descreva o objetivo da norma</span>}
 
-                <select {...register("tipo")}>
-                    <option value="" selected>
-                        Selecione o tipo de norma
-                    </option>
-                    <option value="especificação">especificação</option>
-                    <option value="método de ensaio">método de ensaio</option>
-                    <option value="procedimento">procedimento</option>
-                    <option value="padronização">padronização</option>
-                    <option value="classificação">classificação</option>
+                <select
+                    {...register("tipo")}
+                    defaultValue=""
+                >
+                    <option value="especificação">Especificação</option>
+                    <option value="método de ensaio">Método de Ensaio</option>
+                    <option value="procedimento">Procedimento</option>
+                    <option value="padronização">Padronização</option>
+                    <option value="classificação">Classificação</option>
+                    <option value="simbologia">Simbologia</option>
                 </select>
 
                 {errors.tipo && <span>Digite o tipo da norma</span>}
@@ -53,7 +54,7 @@ export function Cadastro() {
                     <input
                         type="text"
                         placeholder="Digite a edição da norma"
-                        {...register("numero")}
+                        {...register("edicao")}
                     />
                 </div>
                 {errors.numero && <span>Digite o número da norma</span>}
@@ -67,8 +68,8 @@ export function Cadastro() {
                 {errors.arquivo && <span>Selecione o arquivo da norma</span>}
 
                 <div>
-                    <button type="reset" >Limpar</button>
-                    <button type="submit" >Cadastrar</button>
+                    <button type="reset">Limpar</button>
+                    <button type="submit">Cadastrar</button>
                 </div>
             </form>
         </CadForm>

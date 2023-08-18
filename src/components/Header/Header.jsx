@@ -5,11 +5,11 @@ export function Header() {
     return (
         <>
             <Head>
-                <img src={ctex} alt="ctex" />
+                <img src={ctex} alt="Logo CTEx" />
                 <div>
                     <p>
-                        Sistema de Normas Técnicas do Exército Brasileiro -{" "}
-                        <i>SisNEB</i>
+                        <i>SisNEB - Sistema de Normas Técnicas do Exército
+                        Brasileiro</i>
                     </p>
                 </div>
             </Head>

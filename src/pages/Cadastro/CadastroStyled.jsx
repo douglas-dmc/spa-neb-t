@@ -4,18 +4,18 @@ export const CadForm = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 74vh;
-
+    height: 75vh;
+ 
     form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 30px 35px;
-        border: 1px solid #3b3b3b;
+        padding: 40px 35px 25px 35px;
+        border: 1px solid gray;
         border-radius: 8px;
-        width: 600px;
-        //background-color: dodgerblue;
+        width: 650px;
+        background: linear-gradient(to left top, dodgerblue, #fff, #238cf5);
     }
 
     form input,
@@ -26,8 +26,9 @@ export const CadForm = styled.section`
         padding: 7px;
         margin: 8px;
         font-size: 1rem;
-        border: 1px solid #000;
+        border: 1px solid gray;
         border-radius: 5px;
+        background-color: #fff;
     }
 
     form select {

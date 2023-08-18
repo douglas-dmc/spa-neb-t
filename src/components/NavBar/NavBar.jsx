@@ -17,7 +17,7 @@ export function NavBar() {
                     <li>
                         <i className="bi bi-box-arrow-right"></i>Sair
                     </li>
-                    <li>Olá Douglas Marques da Costa</li>
+                    <li>Olá, Douglas Marques da Costa</li>
                 </ul>
             </Nav>
         </>

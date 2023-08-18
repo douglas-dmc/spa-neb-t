@@ -5,6 +5,7 @@ export const Nav = styled.nav`
     flex-direction: row;
     justify-content: center;
     margin: 0 auto;
+    height: 4vh;
 
     ul {
         list-style-type: none;

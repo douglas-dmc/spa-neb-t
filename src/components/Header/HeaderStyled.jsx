@@ -8,7 +8,7 @@ export const Head = styled.div`
     align-items: center;
     max-width: 100%;
     /* background-color: dodgerblue;  */
-    background: linear-gradient(to left top, #1977d4, #2278e9, #238cf5);
+    background: linear-gradient(to left top, #1977d4, #2278e9, #fff, #238cf5);
     padding: 1rem;
     height: 12vh;
     
@@ -18,9 +18,10 @@ export const Head = styled.div`
     }
 
     p {
-        font-size: 2.8rem;
+        font-family: 'Playfair Display', serif;
+        font-size: 3rem;
         font-weight: bold;
-        text-shadow: 1px 2px 8px #000;
+        text-shadow: 3px 5px 8px #000;
         color: #fff;
         padding-left: 2rem;
     }

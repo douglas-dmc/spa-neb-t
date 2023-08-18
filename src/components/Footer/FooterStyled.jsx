@@ -5,8 +5,10 @@ export const Foot = styled.footer`
     align-items: center;
     justify-content: center;
     font-size: 1rem;
-    background-color: #d6d2d2;
+    color: gray;
     width: 100vw;
     height: 3vh;
     padding: 5px 0;
+    margin: 0;
+    border-top: 1px solid gray;
 `
