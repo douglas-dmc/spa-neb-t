@@ -34,6 +34,7 @@ export function Cadastro() {
                     {...register("tipo")}
                     defaultValue=""
                 >
+                    <option value="">Seleciona o tipo de norma</option>
                     <option value="especificação">Especificação</option>
                     <option value="método de ensaio">Método de Ensaio</option>
                     <option value="procedimento">Procedimento</option>
