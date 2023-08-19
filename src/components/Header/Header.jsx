@@ -8,8 +8,8 @@ export function Header() {
                 <img src={ctex} alt="Logo CTEx" />
                 <div>
                     <p>
-                        <i>SisNEB - Sistema de Normas Técnicas do Exército
-                        Brasileiro</i>
+                        SisNEB - Sistema de Normas Técnicas do Exército
+                        Brasileiro
                     </p>
                 </div>
             </Head>

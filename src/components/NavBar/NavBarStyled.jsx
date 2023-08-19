@@ -5,7 +5,7 @@ export const Nav = styled.nav`
     flex-direction: row;
     justify-content: center;
     margin: 0 auto;
-    height: 4vh;
+    /* height: 4vh; */
 
     ul {
         list-style-type: none;
@@ -24,6 +24,7 @@ export const Nav = styled.nav`
         font-size: 1rem;
         cursor: pointer;
         border-right: 1px solid #fff;
+        transition: background .4s;
     }
 
     li:first-child {

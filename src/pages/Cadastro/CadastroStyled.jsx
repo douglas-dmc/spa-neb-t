@@ -4,8 +4,8 @@ export const CadForm = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75vh;
- 
+    height: 74vh;
+
     form {
         display: flex;
         flex-direction: column;
@@ -15,12 +15,14 @@ export const CadForm = styled.section`
         border: 1px solid gray;
         border-radius: 8px;
         width: 650px;
-        background: linear-gradient(to left top, dodgerblue, #fff, #238cf5);
+        background: linear-gradient(to left top, dodgerblue, #fff 30%, #238cf5);
+        background-color: #238cf5d5;
     }
 
     form input,
     form textarea,
-    form select, button {
+    form select,
+    button {
         outline: none;
         width: 95%;
         padding: 7px;
@@ -32,8 +34,13 @@ export const CadForm = styled.section`
     }
 
     form select {
-        width: 98%;
+        width: 97.5%;
         background-color: #fff;
+        margin-bottom: 5;
+    }
+
+    form select option:first-child {
+        color: gray;
     }
 
     form input[type="file"] {
@@ -44,7 +51,7 @@ export const CadForm = styled.section`
         display: flex;
         flex-direction: row;
         width: 100%;
-        margin-top: 15px;
+        margin-top: 10px;
     }
 
     form div button {
@@ -53,7 +60,7 @@ export const CadForm = styled.section`
     }
 
     form div button:hover {
-        background-color: dodgerblue;
+        background-color: #000;
         color: #fff;
         cursor: pointer;
     }
@@ -64,7 +71,7 @@ export const CadForm = styled.section`
         color: #da3737;
         background-color: #f8a9a9c0;
         padding: 5px;
-        width: 96%;
+        width: 95%;
         text-align: center;
     }
 `
