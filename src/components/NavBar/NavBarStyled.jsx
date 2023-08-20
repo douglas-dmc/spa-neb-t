@@ -5,26 +5,28 @@ export const Nav = styled.nav`
     flex-direction: row;
     justify-content: center;
     margin: 0 auto;
-    /* height: 4vh; */
 
     ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        background-color: #000;
-        color: #fff;
+        background-color: var(--bg-color-navbar);
+        color: var(--color-font-navbar);
         width: 100vw;
     }
 
     li {
         display: inline-flex;
         justify-content: center;
-        width: 100px;
         padding: 10px 15px;
         font-size: 1rem;
         cursor: pointer;
-        border-right: 1px solid #fff;
+        border-right: 1px solid var(--color-font-navbar);
         transition: background .4s;
+    }
+
+    li:not(:last-child) {
+        width: 100px;
     }
 
     li:first-child {
@@ -33,16 +35,15 @@ export const Nav = styled.nav`
     }
 
     li:not(:last-child):hover {
-        background-color: #fff;
-        color: #000;
+        background-color: var(--color-font-navbar);
+        color: var(--bg-color-navbar);
         font-weight: bold;
     }
 
     li:last-child {
         border-right: none;
-        width: 30%;
         float: right;
-        margin-right: 70px;
+        margin-right: 20px;
         align-content: center;
         cursor: context-menu;
     }

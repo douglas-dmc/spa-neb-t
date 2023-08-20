@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const Head = styled.div`
+export const Head = styled.header`
     display: flex;
     flex-direction: row;
     gap: 1rem;
