@@ -25,6 +25,13 @@ export const Nav = styled.nav`
         transition: background .4s;
     }
 
+    li a {
+        color: var(--color-font-navbar);
+        text-decoration: none;
+        transition: background .4s;
+        //padding: 10px 15px;
+    }
+
     li:not(:last-child) {
         width: 100px;
     }
@@ -33,8 +40,8 @@ export const Nav = styled.nav`
         margin-left: 50px;
         border-left: 1px solid #fff;
     }
-
-    li:not(:last-child):hover {
+    
+    li:not(:last-child):hover, li a:hover {
         background-color: var(--color-font-navbar);
         color: var(--bg-color-navbar);
         font-weight: bold;
