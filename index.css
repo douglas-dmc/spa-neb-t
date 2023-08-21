@@ -1,5 +1,21 @@
 * {
     margin: 0;
     padding: 0;
-    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:  'Franklin Gothic Medium', Arial, sans-serif;
+}
+
+body {
+    --bg-color-button: #af1111;
+    --bg-color-navbar: #af1111;
+    --bg-color-title-form: #af1111;
+    --bg-color-components: #fff;
+    --bg-color-span: #f8a9a9;
+    --bg-color-gradiente1: dodgerblue;
+    --bg-color-gradiente2: #fff;
+    --bg-color-gradiente3: #238cf5;
+
+    --color-font-title-form: #fff;
+    --color-font-navbar: #fff;
+    --color-font-button: #fff;
+    --color-font-span: #da3737;
 }

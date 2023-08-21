@@ -6,13 +6,16 @@ export function NavBar() {
             <Nav>
                 <ul>
                     <li>
-                        <i className="bi bi-save"></i>Cadastrar
+                        <i className="bi bi-save-fill"></i>Cadastrar
                     </li>
                     <li>
                         <i className="bi bi-search"></i>Consultar
                     </li>
                     <li>
-                        <i className="bi bi-pencil"></i>Editar
+                        <i className="bi bi-pencil-fill"></i>Editar
+                    </li>
+                    <li>
+                        <i className="bi bi-person-lines-fill"></i>Contato
                     </li>
                     <li>
                         <i className="bi bi-box-arrow-right"></i>Sair
