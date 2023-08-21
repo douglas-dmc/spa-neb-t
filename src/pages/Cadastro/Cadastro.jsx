@@ -35,7 +35,7 @@ export function Cadastro() {
         reset()
     }
 
-    console.log(watch())
+    console.log(watch()) 
 
     return (
         <CadForm>

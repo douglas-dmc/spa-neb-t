@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Nav } from "./NavBarStyled"
 
 export function NavBar() {
@@ -6,19 +7,32 @@ export function NavBar() {
             <Nav>
                 <ul>
                     <li>
-                        <i className="bi bi-save-fill"></i>Cadastrar
+                        <Link to="/cadastro">
+                            <i className="bi bi-save-fill"></i>Cadastrar
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link>
+                            <i className="bi bi-search"></i>Consultar
+                        </Link>
                     </li>
                     <li>
-                        <i className="bi bi-search"></i>Consultar
+                        <Link>
+                            <i className="bi bi-pencil-fill"></i>Editar
+                        </Link>
                     </li>
+
                     <li>
-                        <i className="bi bi-pencil-fill"></i>Editar
+                        <Link to="/contato">
+                            <i className="bi bi-person-lines-fill"></i>Contato
+                        </Link>
                     </li>
+
                     <li>
-                        <i className="bi bi-person-lines-fill"></i>Contato
-                    </li>
-                    <li>
-                        <i className="bi bi-box-arrow-right"></i>Sair
+                        <Link>
+                            <i className="bi bi-box-arrow-right"></i>Sair
+                        </Link>
                     </li>
                     <li>Olá, Douglas Marques da Costa</li>
                 </ul>
