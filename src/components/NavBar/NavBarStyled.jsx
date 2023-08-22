@@ -32,10 +32,6 @@ export const Nav = styled.nav`
         padding: 10px 20px;
     }
 
-    li:not(:last-child) {
-        //width: 130px;
-    }
-
     li:first-child {
         margin-left: 50px;
         border-left: 1px solid #fff;
@@ -44,7 +40,6 @@ export const Nav = styled.nav`
     li:not(:last-child):hover {
         background-color: var(--color-font-navbar);
         color: var(--bg-color-navbar);
-        font-weight: bold;
     }
     
     li a:hover {
