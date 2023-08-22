@@ -18,7 +18,7 @@ export const Nav = styled.nav`
     li {
         display: inline-flex;
         justify-content: center;
-        padding: 10px 15px;
+        padding: 0;
         font-size: 1rem;
         cursor: pointer;
         border-right: 1px solid var(--color-font-navbar);
@@ -29,22 +29,26 @@ export const Nav = styled.nav`
         color: var(--color-font-navbar);
         text-decoration: none;
         transition: background .4s;
-        //padding: 10px 15px;
+        padding: 10px 20px;
     }
 
     li:not(:last-child) {
-        width: 100px;
+        //width: 130px;
     }
 
     li:first-child {
         margin-left: 50px;
         border-left: 1px solid #fff;
     }
-    
-    li:not(:last-child):hover, li a:hover {
+
+    li:not(:last-child):hover {
         background-color: var(--color-font-navbar);
         color: var(--bg-color-navbar);
         font-weight: bold;
+    }
+    
+    li a:hover {
+        color: var(--bg-color-navbar);
     }
 
     li:last-child {
@@ -53,6 +57,7 @@ export const Nav = styled.nav`
         margin-right: 20px;
         align-content: center;
         cursor: context-menu;
+        padding: 10px 15px;
     }
 
     li i {

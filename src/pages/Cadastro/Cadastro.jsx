@@ -2,6 +2,8 @@ import { useForm } from "react-hook-form"
 import { CadForm } from "./CadastroStyled"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { cadastroSchema } from "../../schemas/cadastroSchema"
+import { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 export function Cadastro() {
     const {
@@ -21,28 +23,57 @@ export function Cadastro() {
             numero: "",
             edicao: "",
             arquivo: "",
-            bi_aprov: "",
-            data_aprov: "",
-            be_homol: "",
-            data_be: "",
+            bi_numero: "",
+            bi_data: "",
+            be_numero: "",
+            be_data: "",
         },
     })
 
     console.log("errors", errors)
 
-    const onSubmit = (data) => {
-        console.log(data)
+    const navigate = useNavigate()
+
+    const onSubmit = (cadastros) => {
+        fetch("http://localhost:5000/cadastros", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(cadastros),
+        })
+            .then((result) => result.json())
+            .then((data) => {
+                console.log(data)
+                navigate("/cadastro", {message: "Norma cadastrada com sucesso!"})
+            })
+            .catch((error) => console.log(error))
+
         reset()
     }
 
-    console.log(watch()) 
+    console.log(watch())
+
+    const [tipo, setTipo] = useState([])
+
+    useEffect(() => {
+        fetch("http://localhost:5000/tipos", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((result) => result.json())
+            .then((data) => {
+                setTipo(data)
+            })
+            .catch((error) => console.log(error))
+    }, [])
 
     return (
         <CadForm>
             <fieldset>
-                <legend>
-                    Cadastro de NEB/T
-                </legend>
+                <legend>Cadastro de NEB/T</legend>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input
                         {...register("titulo")}
@@ -73,13 +104,11 @@ export function Cadastro() {
                             <option value="" hidden>
                                 Tipo de norma
                             </option>
-                            <option value="E">Especificação</option>
-                            <option value="M">Método de Ensaio</option>
-                            <option value="Pr">Procedimento</option>
-                            <option value="Pd">Padronização</option>
-                            <option value="C">Classificação</option>
-                            <option value="S">Simbologia</option>
-                            <option value="T">Terminologia</option>
+                            {tipo.map((option) => (
+                                <option value={option.id} key={option.id}>
+                                    {option.name}
+                                </option>
+                            ))}
                         </select>
 
                         <input
@@ -94,18 +123,18 @@ export function Cadastro() {
                             <option value="" hidden>
                                 Revisão e modificação
                             </option>
-                            <option value="A">A</option>
-                            <option value="A M1">A M1</option>
-                            <option value="A M2">A M2</option>
-                            <option value="A M3">A M3</option>
-                            <option value="B">B</option>
-                            <option value="B M1">B M1</option>
-                            <option value="B M2">B M2</option>
-                            <option value="B M3">B M3</option>
-                            <option value="C">C</option>
-                            <option value="C M1">C M1</option>
-                            <option value="C M2">C M2</option>
-                            <option value="C M3">C M3</option>
+                            <option value="A" key="A">A</option>
+                            <option value="A M1" key="A M1">A M1</option>
+                            <option value="A M2" key="A M2">A M2</option>
+                            <option value="A M3" key="A M3">A M3</option>
+                            <option value="B" key="B">B</option>
+                            <option value="B M1" key="B M1">B M1</option>
+                            <option value="B M2" key="B M1">B M2</option>
+                            <option value="B M3" key="B M1">B M3</option>
+                            <option value="C" key="c">C</option>
+                            <option value="C M1" key="C M1">C M1</option>
+                            <option value="C M2" key="C M2">C M2</option>
+                            <option value="C M3" key="C M3">C M3</option>
                         </select>
                     </div>
                     {errors.tipo?.message && (
@@ -124,25 +153,25 @@ export function Cadastro() {
 
                     <div>
                         <input
-                            {...register("bi_aprov")}
+                            {...register("bi_numero")}
                             type="text"
                             placeholder="BI de aprovação"
                         />
 
                         <input
-                            {...register("data_aprov")}
+                            {...register("bi_data")}
                             type="date"
                             placeholder="Data de aprovação"
                         />
 
                         <input
-                            {...register("be_homol")}
+                            {...register("be_numero")}
                             type="text"
                             placeholder="BE de homologação"
                         />
 
                         <input
-                            {...register("data_homol")}
+                            {...register("be_data")}
                             type="date"
                             placeholder="Data de homologação"
                         />

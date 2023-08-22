@@ -1,0 +1,64 @@
+{
+  "cadastros": [
+    {
+      "titulo": "Microcalorimetro",
+      "objetivo": "Esta norma estabele a estabilidade quimica",
+      "tipo": "M",
+      "numero": 255,
+      "arquivo": {
+        "0": {}
+      },
+      "id": 1
+    },
+    {
+      "titulo": "Granadas Menos-Letais",
+      "objetivo": "Esta norma define as condições para aceitação",
+      "tipo": "E",
+      "numero": 321,
+      "arquivo": {
+        "0": {}
+      },
+      "id": 2
+    },
+    {
+      "titulo": "Protótipo de Arma de Porte",
+      "objetivo": "Esta norma estabelece as condições para a aceitação",
+      "tipo": "E",
+      "numero": 267,
+      "arquivo": {
+        "0": {}
+      },
+      "id": 3
+    }
+  ],
+  "tipos": [
+    {
+      "id": "E",
+      "name": "Especificação"
+    },
+    {
+      "id": "M",
+      "name": "Método de Ensaio"
+    },
+    {
+      "id": "Pr",
+      "name": "Procedimento"
+    },
+    {
+      "id": "Pd",
+      "name": "Padronização"
+    },
+    {
+      "id": "C",
+      "name": "Classificação"
+    },
+    {
+      "id": "S",
+      "name": "Simbologia"
+    },
+    {
+      "id": "T",
+      "name": "Terminologia"
+    }
+  ]
+}

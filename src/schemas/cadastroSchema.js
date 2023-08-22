@@ -28,10 +28,5 @@ export const cadastroSchema = z.object({
             (files) => files?.[0]?.size <= 6000000,
             "O arquivo deve ter no máximo 6 MB"
         ),
-    bi_aprov: z
-        .string()
-        .nonempty({ message: "Digite o BI de aprovação da norma" }),
-    homol: z
-        .string()
-        .nonempty({ message: "Digite o BE de homologação da norma" }),
+    
 })
