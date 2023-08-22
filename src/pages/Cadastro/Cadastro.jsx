@@ -34,7 +34,9 @@ export function Cadastro() {
 
     const navigate = useNavigate()
 
-    const onSubmit = (cadastros) => {
+    const onSubmit = () => {
+        const cadastros = watch()
+
         fetch("http://localhost:5000/cadastros", {
             method: "POST",
             headers: {
@@ -123,18 +125,18 @@ export function Cadastro() {
                             <option value="" hidden>
                                 Revisão e modificação
                             </option>
-                            <option value="A" key="A">A</option>
-                            <option value="A M1" key="A M1">A M1</option>
-                            <option value="A M2" key="A M2">A M2</option>
-                            <option value="A M3" key="A M3">A M3</option>
-                            <option value="B" key="B">B</option>
-                            <option value="B M1" key="B M1">B M1</option>
-                            <option value="B M2" key="B M1">B M2</option>
-                            <option value="B M3" key="B M1">B M3</option>
-                            <option value="C" key="c">C</option>
-                            <option value="C M1" key="C M1">C M1</option>
-                            <option value="C M2" key="C M2">C M2</option>
-                            <option value="C M3" key="C M3">C M3</option>
+                            <option value="A">A</option>
+                            <option value="A M1">A M1</option>
+                            <option value="A M2">A M2</option>
+                            <option value="A M3">A M3</option>
+                            <option value="B">B</option>
+                            <option value="B M1">B M1</option>
+                            <option value="B M2">B M2</option>
+                            <option value="B M3">B M3</option>
+                            <option value="C">C</option>
+                            <option value="C M1">C M1</option>
+                            <option value="C M2">C M2</option>
+                            <option value="C M3">C M3</option>
                         </select>
                     </div>
                     {errors.tipo?.message && (
@@ -161,7 +163,6 @@ export function Cadastro() {
                         <input
                             {...register("bi_data")}
                             type="date"
-                            placeholder="Data de aprovação"
                         />
 
                         <input
@@ -173,7 +174,6 @@ export function Cadastro() {
                         <input
                             {...register("be_data")}
                             type="date"
-                            placeholder="Data de homologação"
                         />
                     </div>
 

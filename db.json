@@ -29,6 +29,93 @@
         "0": {}
       },
       "id": 3
+    },
+    {
+      "titulo": "Pólvoras mecânicas",
+      "objetivo": "Esta norma prescreve as condições exigiveis",
+      "tipo": "Pr",
+      "numero": 23,
+      "arquivo": {
+        "0": {}
+      },
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 17
+    },
+    {
+      "id": 18
+    },
+    {
+      "titulo": "Fuzil",
+      "objetivo": "Esta norma prescreve as caracteristicas do fuzil 7,62",
+      "tipo": "E",
+      "numero": 111,
+      "arquivo": {
+        "0": {}
+      },
+      "id": 19
+    },
+    {
+      "titulo": "Fuzil",
+      "objetivo": "ddddddddddddddddddd",
+      "tipo": "E",
+      "numero": 23,
+      "arquivo": {
+        "0": {}
+      },
+      "id": 20
+    },
+    {
+      "titulo": "Cianeto de potássio",
+      "objetivo": "Esta norma define os ensaios para a análise",
+      "tipo": "M",
+      "numero": 133,
+      "edicao": "B",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 26",
+      "bi_data": "2023-04-11",
+      "be_numero": "BE nº 11",
+      "be_data": "2023-05-23",
+      "id": 21
     }
   ],
   "tipos": [
