@@ -22,7 +22,7 @@ export function Cadastro() {
             tipo: "",
             numero: "",
             edicao: "",
-            arquivo: "",
+            arquivo: {},
             bi_numero: "",
             bi_data: "",
             be_numero: "",
@@ -30,9 +30,9 @@ export function Cadastro() {
         },
     })
 
-    console.log("errors", errors)
-
     const navigate = useNavigate()
+
+    console.log("errors", errors)
 
     const onSubmit = () => {
         const cadastros = watch()
@@ -47,7 +47,9 @@ export function Cadastro() {
             .then((result) => result.json())
             .then((data) => {
                 console.log(data)
-                navigate("/cadastro", {message: "Norma cadastrada com sucesso!"})
+                navigate("/cadastro", {
+                    message: "Norma cadastrada com sucesso!",
+                })
             })
             .catch((error) => console.log(error))
 
@@ -115,7 +117,7 @@ export function Cadastro() {
 
                         <input
                             {...register("numero", {
-                                setValueAs: (value) => parseInt(value, 10),
+                                valueAsNumber: true,
                             })}
                             type="number"
                             placeholder="Número da norma"
@@ -161,7 +163,7 @@ export function Cadastro() {
                         />
 
                         <input
-                            {...register("bi_data")}
+                            {...register("bi_data", { valueAsDate: true })}
                             type="date"
                         />
 
@@ -172,7 +174,7 @@ export function Cadastro() {
                         />
 
                         <input
-                            {...register("be_data")}
+                            {...register("be_data", { valueAsDate: true })}
                             type="date"
                         />
                     </div>

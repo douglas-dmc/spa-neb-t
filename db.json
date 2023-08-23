@@ -74,6 +74,96 @@
       "be_numero": "BE nº 11",
       "be_data": "2023-05-23",
       "id": 21
+    },
+    {
+      "titulo": "eeee",
+      "objetivo": "dddddddddddddd",
+      "tipo": "M",
+      "numero": 2,
+      "edicao": "",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "",
+      "bi_data": "",
+      "be_numero": "",
+      "be_data": "",
+      "id": 22
+    },
+    {
+      "titulo": "Desenho técnico",
+      "objetivo": "Esta norma classifica os denhos técnicos no EB.",
+      "tipo": "C",
+      "numero": 12,
+      "edicao": "A M1",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 02",
+      "bi_data": "2023-02-06",
+      "be_numero": "BE nº 49",
+      "be_data": "2023-05-09",
+      "id": 23
+    },
+    {
+      "titulo": "Explosivo plástico",
+      "objetivo": "Esta norma define os tipos de explosivos plásticos usados no EB.",
+      "tipo": "C",
+      "numero": 56,
+      "edicao": "A",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 73",
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_numero": "BE nº 19",
+      "be_data": "2023-08-16T00:00:00.000Z",
+      "id": 24
+    },
+    {
+      "titulo": "Nitrotolueno",
+      "objetivo": "Esta norma prescreve",
+      "tipo": "E",
+      "numero": 29,
+      "edicao": "A",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 58",
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_numero": "BE nº 37",
+      "be_data": "2023-08-16T00:00:00.000Z",
+      "id": 25
+    },
+    {
+      "titulo": "Metralhadora",
+      "objetivo": "Esta norma prescreve",
+      "tipo": "E",
+      "numero": 256,
+      "edicao": "B",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 02",
+      "bi_data": "2023-06-12T00:00:00.000Z",
+      "be_numero": "BE nº 13",
+      "be_data": "2023-07-26T00:00:00.000Z",
+      "id": 26
+    },
+    {
+      "titulo": "Arma de ar comprimido",
+      "objetivo": "Esta norma fixa os procedimentos",
+      "tipo": "Pr",
+      "numero": 22,
+      "edicao": "A M3",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 50",
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_numero": "BE nº 152",
+      "be_data": "2023-08-16T00:00:00.000Z",
+      "id": 27
     }
   ],
   "tipos": [
