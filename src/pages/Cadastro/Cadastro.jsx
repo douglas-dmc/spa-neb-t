@@ -9,7 +9,6 @@ export function Cadastro() {
     const {
         register,
         handleSubmit,
-        watch,
         reset,
         formState: { errors },
     } = useForm({
@@ -32,10 +31,7 @@ export function Cadastro() {
 
     const navigate = useNavigate()
 
-    console.log("errors", errors)
-
-    const onSubmit = () => {
-        const cadastros = watch()
+    const onSubmit = (cadastros) => {
 
         fetch("http://localhost:5000/cadastros", {
             method: "POST",
@@ -47,8 +43,8 @@ export function Cadastro() {
             .then((result) => result.json())
             .then((data) => {
                 console.log(data)
-                navigate("/cadastro", {
-                    message: "Norma cadastrada com sucesso!",
+                navigate("/cadastro", {state:
+                    {message: "Norma cadastrada com sucesso!"},
                 })
             })
             .catch((error) => console.log(error))
@@ -56,7 +52,7 @@ export function Cadastro() {
         reset()
     }
 
-    console.log(watch())
+    //console.log(watch())
 
     const [tipo, setTipo] = useState([])
 

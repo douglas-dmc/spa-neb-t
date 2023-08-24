@@ -164,6 +164,177 @@
       "be_numero": "BE nº 152",
       "be_data": "2023-08-16T00:00:00.000Z",
       "id": 27
+    },
+    {
+      "titulo": "Cartucho 90mm AE",
+      "objetivo": "Esta norma descreve",
+      "tipo": "E",
+      "numero": 345,
+      "edicao": "",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 02",
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_numero": "BE nº 12",
+      "be_data": "2023-08-15T00:00:00.000Z",
+      "id": 28
+    },
+    {
+      "titulo": "Colete balístico",
+      "objetivo": "Esta norma descreve",
+      "tipo": "M",
+      "numero": 32,
+      "edicao": "A M2",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 50",
+      "bi_data": "2023-03-07T00:00:00.000Z",
+      "be_numero": "BE nº 13",
+      "be_data": "2023-06-26T00:00:00.000Z",
+      "id": 29
+    },
+    {
+      "titulo": "Capacete balístico",
+      "objetivo": "Esta norma define as espeificações",
+      "tipo": "E",
+      "numero": 56,
+      "edicao": "",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 55",
+      "bi_data": "2023-06-06T00:00:00.000Z",
+      "be_numero": "BE nº 48",
+      "be_data": "2023-07-11T00:00:00.000Z",
+      "id": 30
+    },
+    {
+      "titulo": "Prego",
+      "objetivo": "Esta norma descreve",
+      "tipo": "E",
+      "numero": 12,
+      "edicao": "",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 123",
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_numero": "BE nº 13",
+      "be_data": "2023-08-14T00:00:00.000Z",
+      "id": 31
+    },
+    {
+      "titulo": "Teste 1",
+      "objetivo": "Esta norma prescreve o teste 1",
+      "tipo": "Pr",
+      "numero": 123,
+      "edicao": "B M1",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 50",
+      "bi_data": "2023-06-12T00:00:00.000Z",
+      "be_numero": "BE nº 11",
+      "be_data": "2023-07-18T00:00:00.000Z",
+      "id": 32
+    },
+    {
+      "titulo": "Teste 2",
+      "objetivo": "Esta norma estabelece",
+      "tipo": "E",
+      "numero": 223,
+      "edicao": "",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 50",
+      "bi_data": "2023-08-02T00:00:00.000Z",
+      "be_numero": "BE nº 43",
+      "be_data": "2023-08-17T00:00:00.000Z",
+      "id": 33
+    },
+    {
+      "titulo": "Teste 3",
+      "objetivo": "Esta norma",
+      "tipo": "M",
+      "numero": 34,
+      "arquivo": {
+        "0": {}
+      },
+      "id": 34
+    },
+    {
+      "titulo": "Teste 4",
+      "objetivo": "Esta norma descreve",
+      "tipo": "Pr",
+      "numero": 76,
+      "arquivo": {
+        "0": {}
+      },
+      "id": 35
+    },
+    {
+      "titulo": "Teste 5",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 344,
+      "arquivo": {
+        "0": {}
+      },
+      "id": 36
+    },
+    {
+      "titulo": "Teste 6",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 267,
+      "arquivo": {
+        "0": {}
+      },
+      "id": 37
+    },
+    {
+      "titulo": "Teste 7",
+      "objetivo": "Esta norma",
+      "tipo": "M",
+      "numero": 33,
+      "bi_numero": "BI-CTEx nº 50",
+      "be_numero": "BE nº 43",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 38
+    },
+    {
+      "titulo": "Teste 8",
+      "objetivo": "esta norma",
+      "tipo": "M",
+      "numero": 444,
+      "bi_numero": "BI-CTEx nº 50",
+      "be_numero": "BE nº 11",
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-14T00:00:00.000Z",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 39
+    },
+    {
+      "titulo": "Teste 9",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 345,
+      "edicao": "",
+      "bi_numero": "BI-CTEx nº 23",
+      "be_numero": "BE nº 194",
+      "bi_data": "2023-07-04T00:00:00.000Z",
+      "be_data": "2023-08-21T00:00:00.000Z",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 40
     }
   ],
   "tipos": [
