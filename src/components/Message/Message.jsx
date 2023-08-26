@@ -4,7 +4,6 @@ import PropType from "prop-types"
 
 export function Message({ type, msg }) {
     const [visible, setVisible] = useState(false)
-    console.log({type, msg})
 
     useEffect(() => {
 
@@ -17,10 +16,10 @@ export function Message({ type, msg }) {
 
         const timer = setTimeout(() => {
                 setVisible(false)
-            }, 6000)
+            }, 4000)
 
         return () => clearTimeout(timer)
-
+ 
     }, [msg])
 
     return <>{visible && <Msg $mode={type}>{msg}</Msg>}</>

@@ -7,6 +7,7 @@ export const Msg = styled.span`
     padding: 0.8rem;
     margin: 0 auto;
     font-family: "Franklin Gothic Medium", Arial, sans-serif;
+    font-size: 1.1rem;
     text-align: center;
 
     ${(props) => {
@@ -25,7 +26,7 @@ export const Msg = styled.span`
                 `
             default:
                 return `
-                    border: 1px solid #000;
+                    border: none;
                 `
         }
     }}

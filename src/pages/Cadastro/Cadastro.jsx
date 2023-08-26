@@ -21,18 +21,18 @@ export function Cadastro() {
             tipo: "",
             numero: "",
             edicao: "",
-            arquivo: {},
+            arquivo: "",
             bi_numero: "",
             bi_data: "",
             be_numero: "",
             be_data: "",
+            status: "ativa",
         },
     })
 
     const navigate = useNavigate()
 
     const onSubmit = (cadastros) => {
-
         fetch("http://localhost:5000/cadastros", {
             method: "POST",
             headers: {
@@ -43,16 +43,16 @@ export function Cadastro() {
             .then((result) => result.json())
             .then((data) => {
                 console.log(data)
-                navigate("/cadastro", {state:
-                    {message: "Norma cadastrada com sucesso!"},
+                navigate("/cadastro", {
+                    state: {
+                        message: "Norma cadastrada com sucesso!",
+                    },
                 })
             })
             .catch((error) => console.log(error))
 
         reset()
     }
-
-    //console.log(watch())
 
     const [tipo, setTipo] = useState([])
 
@@ -73,12 +73,16 @@ export function Cadastro() {
     return (
         <CadForm>
             <fieldset>
-                <legend>Cadastro de NEB/T</legend>
+                <div className="legenda">
+                    <legend>
+                        Cadastro de NEB/T - Parâmetros da Norma Técnica
+                    </legend>
+                </div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input
                         {...register("titulo")}
                         type="text"
-                        placeholder="Título da norma"
+                        placeholder="Título"
                     />
                     {errors.titulo?.message && (
                         <span>
@@ -90,7 +94,7 @@ export function Cadastro() {
                     <textarea
                         {...register("objetivo")}
                         rows="3"
-                        placeholder="Objetivo da norma"
+                        placeholder="Objetivo"
                     ></textarea>
                     {errors.objetivo?.message && (
                         <span>
@@ -99,43 +103,60 @@ export function Cadastro() {
                         </span>
                     )}
 
-                    <div>
-                        <select {...register("tipo")}>
-                            <option value="" hidden>
-                                Tipo de norma
+                    <select {...register("tipo")} required>
+                        <option value="" hidden>
+                            Tipo
+                        </option>
+                        {tipo.map((option) => (
+                            <option value={option.id} key={option.id}>
+                                {option.name}
                             </option>
-                            {tipo.map((option) => (
-                                <option value={option.id} key={option.id}>
-                                    {option.name}
-                                </option>
-                            ))}
-                        </select>
+                        ))}
+                    </select>
+
+                    <input
+                        {...register("numero", {
+                            valueAsNumber: true,
+                        })}
+                        type="number"
+                        placeholder="Número"
+                    />
+
+                    <select {...register("edicao")} required>
+                        <option value="" hidden>
+                            Revisões
+                        </option>
+                        <option value="NR">Não revisada</option>
+                        <option value="A">A</option>
+                        <option value="A M1">A M1</option>
+                        <option value="A M2">A M2</option>
+                        <option value="A M3">A M3</option>
+                        <option value="B">B</option>
+                        <option value="B M1">B M1</option>
+                        <option value="B M2">B M2</option>
+                        <option value="B M3">B M3</option>
+                        <option value="C">C</option>
+                        <option value="C M1">C M1</option>
+                        <option value="C M2">C M2</option>
+                        <option value="C M3">C M3</option>
+                    </select>
+
+                    <div className="status">
+                        <input
+                            type="radio"
+                            value="ativa"
+                            id="ativa"
+                            {...register("status")}
+                        />
+                        <label htmlFor="ativa">ativa</label>
 
                         <input
-                            {...register("numero", {
-                                valueAsNumber: true,
-                            })}
-                            type="number"
-                            placeholder="Número da norma"
+                            type="radio"
+                            value="cancelada"
+                            id="cancelada"
+                            {...register("status")}
                         />
-
-                        <select {...register("edicao")}>
-                            <option value="" hidden>
-                                Revisão e modificação
-                            </option>
-                            <option value="A">A</option>
-                            <option value="A M1">A M1</option>
-                            <option value="A M2">A M2</option>
-                            <option value="A M3">A M3</option>
-                            <option value="B">B</option>
-                            <option value="B M1">B M1</option>
-                            <option value="B M2">B M2</option>
-                            <option value="B M3">B M3</option>
-                            <option value="C">C</option>
-                            <option value="C M1">C M1</option>
-                            <option value="C M2">C M2</option>
-                            <option value="C M3">C M3</option>
-                        </select>
+                        <label htmlFor="cancelada">cancelada</label>
                     </div>
                     {errors.tipo?.message && (
                         <span>
@@ -151,31 +172,39 @@ export function Cadastro() {
                         </span>
                     )}
 
-                    <div>
-                        <input
-                            {...register("bi_numero")}
-                            type="text"
-                            placeholder="BI de aprovação"
-                        />
+                    <input
+                        {...register("bi_numero", { valueAsNumber: true })}
+                        type="number"
+                        placeholder="Número do BI"
+                    />
 
-                        <input
-                            {...register("bi_data", { valueAsDate: true })}
-                            type="date"
-                        />
+                    <input
+                        {...register("bi_data", { valueAsDate: true })}
+                        type="date"
+                    />
 
-                        <input
-                            {...register("be_numero")}
-                            type="text"
-                            placeholder="BE de homologação"
-                        />
+                    <input
+                        {...register("be_numero", { valueAsNumber: true })}
+                        type="number"
+                        placeholder="Número do BE"
+                    />
 
-                        <input
-                            {...register("be_data", { valueAsDate: true })}
-                            type="date"
-                        />
-                    </div>
+                    <input
+                        {...register("be_data", { valueAsDate: true })}
+                        type="date"
+                    />
+                    {errors.bi_numero?.message && (
+                        <span>
+                            <i className="bi bi-exclamation-circle-fill"></i>
+                            {errors.bi_numero.message}
+                        </span>
+                    )}
 
-                    <input {...register("arquivo")} type="file" accept=".pdf" />
+                    <input
+                        {...register("arquivo")}
+                        type="file"
+                        accept=".pdf"
+                    />
                     {errors.arquivo?.message && (
                         <span>
                             <i className="bi bi-exclamation-circle-fill"></i>
@@ -183,14 +212,12 @@ export function Cadastro() {
                         </span>
                     )}
 
-                    <aside>
-                        <button type="reset">
-                            <i className="bi bi-trash-fill"></i>Limpar
-                        </button>
-                        <button type="submit">
-                            <i className="bi bi-save-fill"></i>Cadastrar
-                        </button>
-                    </aside>
+                    <button type="reset">
+                        <i className="bi bi-trash-fill"></i>Limpar
+                    </button>
+                    <button type="submit">
+                        <i className="bi bi-save-fill"></i>Cadastrar
+                    </button>
                 </form>
             </fieldset>
         </CadForm>
