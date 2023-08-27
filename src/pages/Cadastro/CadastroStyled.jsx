@@ -43,10 +43,10 @@ export const CadForm = styled.main`
             "tipo      numero   edicao    status"
             "bi_numero bi_data  be_numero be_data"
             "arquivo   arquivo  arquivo   arquivo"
-            "btn_reset  btn_reset  btn_submit  btn_submit";
+            "grupo_btn  grupo_btn  grupo_btn  grupo_btn";
         column-gap: 10px;
-        row-gap: 8px;
-        align-items: center;
+        row-gap: 5px;
+        align-content: space-between;
         justify-content: space-between;
         padding: 10px 35px;
         margin: 0;
@@ -67,6 +67,7 @@ export const CadForm = styled.main`
         font-family: Arial, Helvetica, sans-serif;
         padding: 7px;
         margin: 0;
+        margin-top: 10px;
         font-size: 0.9rem;
         border: 1px solid gray;
         border-radius: 4px;
@@ -97,7 +98,7 @@ export const CadForm = styled.main`
     }
 
     form select:valid,
-    form input:invalid {
+    form input:valid {
         color: #000;
     }
 
@@ -119,7 +120,9 @@ export const CadForm = styled.main`
         grid-area: status;
         color: var(--bg-color-button);
         font-size: 1.2rem;
-        margin: 0;
+        margin-top: 10px;
+        align-self: center;
+        accent-color: var(--bg-color-button);
     }
 
     .status > * {
@@ -151,22 +154,56 @@ export const CadForm = styled.main`
         grid-area: be_data;
     }
 
-    form input[type="file"] {
+    form .uploaderFile {
         grid-column-start: 1;
         grid-column-end: 5;
         grid-area: arquivo;
+        background-color: var(--bg-color-components);
+        padding: 3px 4px;
+        border: 1px solid gray;
+        border-radius: 4px;
+        margin-top: 5px;
+        display: flex;
+        align-content: center;
     }
 
-    form button[type="reset"] {
-        grid-column-start: 3;
-        grid-column-end: 4;
-        grid-area: btn_reset;
+    form .uploaderFile label {
+        background-color: var(--bg-color-button);
+        color: var(--color-font-button);
+        border: 1px solid var(--bg-color-button);
+        border-radius: 4px;
+        padding: 5px 10px;
+        margin: 0 2px;
+        cursor: pointer;
+        align-self: center;
+        transition: 0.2s;
     }
 
-    form button[type="submit"] {
+    form .uploaderFile input {
+        margin: 0;
+        padding: 0px 10px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9rem;
+        border: none;
+        width: 78%;
+    }
+
+    form .uploaderFile label:hover {
+        background-color: var(--color-font-button);
+        color: var(--bg-color-button);
+    }
+
+    form input[type="file"] {
+        display: none;
+    }
+
+    form .grupo_btn {
+        display: flex;
+        gap: 10px;
+        justify-content: end;
         grid-column-start: 4;
         grid-column-end: 5;
-        grid-area: btn_submit;
+        grid-area: grupo_btn;
     }
 
     form button {
@@ -179,6 +216,7 @@ export const CadForm = styled.main`
         padding: 7px;
         margin-top: 10px;
         transition: 0.4s;
+        width: 130px;
     }
 
     form button i {

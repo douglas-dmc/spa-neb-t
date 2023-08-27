@@ -474,6 +474,273 @@
         "0": {}
       },
       "id": 49
+    },
+    {
+      "titulo": "Teste 24",
+      "objetivo": "Esta norma define",
+      "tipo": "C",
+      "numero": 23,
+      "edicao": "NR",
+      "bi_numero": 12,
+      "be_numero": 56,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-22T00:00:00.000Z",
+      "status": "cancelada",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 50
+    },
+    {
+      "titulo": "Teste 25",
+      "objetivo": "Esta norma ",
+      "tipo": "T",
+      "numero": 2,
+      "edicao": "NR",
+      "bi_numero": 26,
+      "be_numero": 67,
+      "bi_data": "2023-04-03T00:00:00.000Z",
+      "be_data": "2023-08-08T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 51
+    },
+    {
+      "titulo": "Teste 26",
+      "objetivo": "Esta norma",
+      "tipo": "M",
+      "numero": 222,
+      "edicao": "NR",
+      "bi_numero": 78,
+      "be_numero": 34,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-22T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 52
+    },
+    {
+      "titulo": "Teste 27",
+      "objetivo": "Esta norma",
+      "tipo": "Pr",
+      "numero": 33,
+      "edicao": "A",
+      "bi_numero": 59,
+      "be_numero": 45,
+      "bi_data": "2023-08-03T00:00:00.000Z",
+      "be_data": "2023-08-15T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 53
+    },
+    {
+      "titulo": "Teste 28",
+      "objetivo": "Esta norma",
+      "tipo": "Pd",
+      "numero": 17,
+      "edicao": "NR",
+      "bi_numero": 55,
+      "be_numero": 34,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-15T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 54
+    },
+    {
+      "titulo": "Teste 29",
+      "objetivo": "Esta norma",
+      "tipo": "Pr",
+      "numero": 66,
+      "edicao": "A",
+      "bi_numero": 23,
+      "be_numero": 77,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-22T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 55
+    },
+    {
+      "titulo": "Teste 30",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 345,
+      "edicao": "A M2",
+      "bi_numero": 79,
+      "be_numero": 45,
+      "bi_data": "2023-08-03T00:00:00.000Z",
+      "be_data": "2023-08-15T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 56
+    },
+    {
+      "titulo": "Teste 31",
+      "objetivo": "Esta norma ",
+      "tipo": "Pr",
+      "numero": 41,
+      "edicao": "NR",
+      "bi_numero": 79,
+      "be_numero": 34,
+      "bi_data": "2023-07-03T00:00:00.000Z",
+      "be_data": "2023-08-14T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 57
+    },
+    {
+      "titulo": "Teste 32",
+      "objetivo": "Esta norma",
+      "tipo": "Pd",
+      "numero": 18,
+      "edicao": "NR",
+      "bi_numero": 66,
+      "be_numero": 23,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-16T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 58
+    },
+    {
+      "titulo": "Teste 33",
+      "objetivo": "Esta norma",
+      "tipo": "Pd",
+      "numero": 18,
+      "edicao": "NR",
+      "bi_numero": 123,
+      "be_numero": 234,
+      "bi_data": "2022-11-15T00:00:00.000Z",
+      "be_data": "2023-06-13T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 59
+    },
+    {
+      "titulo": "Teste 34",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 34,
+      "edicao": "NR",
+      "bi_numero": 33,
+      "be_numero": 45,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-07T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 60
+    },
+    {
+      "titulo": "Teste 35",
+      "objetivo": "Esta norma",
+      "tipo": "Pr",
+      "numero": 42,
+      "edicao": "NR",
+      "bi_numero": 167,
+      "be_numero": 91,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-23T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 61
+    },
+    {
+      "titulo": "Teste 36",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 345,
+      "edicao": "NR",
+      "bi_numero": 88,
+      "be_numero": 234,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-15T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 62
+    },
+    {
+      "titulo": "Teste 37",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 333,
+      "edicao": "NR",
+      "bi_numero": 45,
+      "be_numero": 222,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-22T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 63
+    },
+    {
+      "titulo": "Teste 38",
+      "objetivo": "Esta norma",
+      "tipo": "M",
+      "numero": 34,
+      "edicao": "A M1",
+      "bi_numero": 46,
+      "be_numero": 57,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-22T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 64
+    },
+    {
+      "titulo": "Teste 39",
+      "objetivo": "Esta norma ",
+      "tipo": "Pr",
+      "numero": 78,
+      "edicao": "NR",
+      "bi_numero": 123,
+      "be_numero": 345,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-22T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 65
+    },
+    {
+      "id": 66
+    },
+    {
+      "titulo": "Teste 41",
+      "objetivo": "Esta norma",
+      "tipo": "Pd",
+      "numero": 17,
+      "edicao": "NR",
+      "bi_numero": 98,
+      "be_numero": 187,
+      "bi_data": "2023-08-03T00:00:00.000Z",
+      "be_data": "2023-08-27T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 67
     }
   ],
   "tipos": [

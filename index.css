@@ -5,6 +5,8 @@
 }
 
 body {
+    text-rendering: optimizeLegibility;
+
     --bg-color-button: #af1111;
     --bg-color-navbar: #af1111;
     --bg-color-title-form: #af1111;

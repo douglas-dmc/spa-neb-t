@@ -38,14 +38,15 @@ export const cadastroSchema = z.object({
     be_data: z.date(),
     status: z.string(),
     arquivo: z
-        .any()
+        .instanceof(FileList)
         .refine((files) => files?.length > 0, {
             message: "Selecione o arquivo da norma",
         })
-        .refine((files) => files?.[0]?.type == "application/pdf", {
+        .transform((list) => list.item(0))
+        .refine((files) => files.type == "application/pdf", {
             message: "O arquivo deve estar no formato pdf",
         })
-        .refine((files) => files?.[0]?.size <= 6000000, {
+        .refine((files) => files.size <= 6 * 1024 * 1024, {
             message: "O arquivo deve ter no máximo 6 MB",
         }),
 })

@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const Msg = styled.span`
     display: flex;
@@ -13,21 +13,26 @@ export const Msg = styled.span`
     ${(props) => {
         switch (props.$mode) {
             case "success":
-                return `
+                return css`
                     color: #176e2b;
                     background-color: #d4edda;
                     border-color: #c3e6cb;
                 `
             case "error":
-                return `
+                return css`
                     color: #721c24;
                     background-color: #f8d7da;
                     border-color: #f5c6cb;
                 `
             default:
-                return `
+                return css`
                     border: none;
                 `
         }
     }}
+
+    i {
+        margin-right: 10px;
+        font-size: 1.3rem
+    }
 `

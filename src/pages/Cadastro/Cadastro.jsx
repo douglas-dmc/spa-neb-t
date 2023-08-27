@@ -10,6 +10,7 @@ export function Cadastro() {
         register,
         handleSubmit,
         reset,
+        watch,
         formState: { errors },
     } = useForm({
         mode: "all",
@@ -21,7 +22,7 @@ export function Cadastro() {
             tipo: "",
             numero: "",
             edicao: "",
-            arquivo: "",
+            arquivo: {},
             bi_numero: "",
             bi_data: "",
             be_numero: "",
@@ -33,6 +34,16 @@ export function Cadastro() {
     const navigate = useNavigate()
 
     const onSubmit = (cadastros) => {
+        // let fileName = watch("arquivo[0].name")
+        // if (fileName.length > 80) {
+        //     let parte = fileName.length - 80
+        //     let subparte = fileName.substr(40, parte)
+        //     let newFileName = fileName.replace(subparte, " ... ")
+        // }
+        // if (cadastros.arquivo.length > 0){
+        //     const reader = new FileReader()
+        // }
+
         fetch("http://localhost:5000/cadastros", {
             method: "POST",
             headers: {
@@ -46,10 +57,19 @@ export function Cadastro() {
                 navigate("/cadastro", {
                     state: {
                         message: "Norma cadastrada com sucesso!",
+                        typeMessage: "success",
                     },
                 })
             })
-            .catch((error) => console.log(error))
+            .catch((error) => {
+                console.log(error)
+                navigate("/cadastro", {
+                    state: {
+                        message: "Norma não cadastrada!",
+                        typeMessage: "error",
+                    },
+                })
+            })
 
         reset()
     }
@@ -78,7 +98,7 @@ export function Cadastro() {
                         Cadastro de NEB/T - Parâmetros da Norma Técnica
                     </legend>
                 </div>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form name="cadastros" onSubmit={handleSubmit(onSubmit)}>
                     <input
                         {...register("titulo")}
                         type="text"
@@ -146,6 +166,7 @@ export function Cadastro() {
                             type="radio"
                             value="ativa"
                             id="ativa"
+                            defaultChecked
                             {...register("status")}
                         />
                         <label htmlFor="ativa">ativa</label>
@@ -181,6 +202,7 @@ export function Cadastro() {
                     <input
                         {...register("bi_data", { valueAsDate: true })}
                         type="date"
+                        max={new Date().toISOString().split("T")[0]}
                     />
 
                     <input
@@ -192,6 +214,7 @@ export function Cadastro() {
                     <input
                         {...register("be_data", { valueAsDate: true })}
                         type="date"
+                        max={new Date().toISOString().split("T")[0]}
                     />
                     {errors.bi_numero?.message && (
                         <span>
@@ -199,25 +222,43 @@ export function Cadastro() {
                             {errors.bi_numero.message}
                         </span>
                     )}
-
-                    <input
-                        {...register("arquivo")}
-                        type="file"
-                        accept=".pdf"
-                    />
+                    <div className="uploaderFile">
+                        <label htmlFor="uploader">
+                            Upload da norma
+                            <input
+                                {...register("arquivo")}
+                                id="uploader"
+                                type="file"
+                                accept=".pdf"
+                            />
+                        </label>
+                        <input
+                            type="text"
+                            defaultValue={
+                                watch("arquivo") && watch("arquivo[0].name")
+                            }
+                            readOnly
+                        />
+                    </div>
                     {errors.arquivo?.message && (
                         <span>
                             <i className="bi bi-exclamation-circle-fill"></i>
                             {errors.arquivo.message}
                         </span>
                     )}
-
-                    <button type="reset">
-                        <i className="bi bi-trash-fill"></i>Limpar
-                    </button>
-                    <button type="submit">
-                        <i className="bi bi-save-fill"></i>Cadastrar
-                    </button>
+                    <div className="grupo_btn">
+                        <button
+                            type="reset"
+                            onClick={() => {
+                                reset({ arquivo: "" })
+                            }}
+                        >
+                            <i className="bi bi-trash-fill"></i>Limpar
+                        </button>
+                        <button type="submit">
+                            <i className="bi bi-save-fill"></i>Cadastrar
+                        </button>
+                    </div>
                 </form>
             </fieldset>
         </CadForm>

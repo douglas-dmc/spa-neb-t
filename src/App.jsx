@@ -9,18 +9,20 @@ import { useLocation } from "react-router-dom"
 function App() {
     const location = useLocation()
     let message = ""
+    let typeMessage = ""
 
     console.log(location)
 
     if (location.state) {
-        message = location.state.message
+        message = location.state.message,
+        typeMessage = location.state.typeMessage
     }
 
     return (
         <>
             <Header />
             <NavBar />
-            {message && <Message type="success" msg={message} />}
+            {message && <Message type={typeMessage} msg={message} />}
             <Outlet />
             <Footer />
         </>

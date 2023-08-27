@@ -26,9 +26,15 @@ export const Nav = styled.nav`
         border-right: 1px solid var(--color-font-navbar);
     }
     
-    li:not(:last-child):hover {
+    li:not(:nth-child(5)):hover {
         background-color: var(--color-font-navbar);
         color: var(--bg-color-navbar);
+    }
+
+    li:nth-child(5) {
+        border-right: none;
+        cursor: context-menu;
+        margin-left: auto;
     }
 
     li i {

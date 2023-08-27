@@ -28,12 +28,12 @@ export function NavBar() {
                     </Link>
                 </li>
 
+                <li>Olá, Douglas Marques da Costa</li>
                 <li>
                     <Link>
                         <i className="bi bi-box-arrow-right"></i>Sair
                     </Link>
                 </li>
-                <li>Olá, Douglas Marques da Costa</li>
             </ul>
         </Nav>
     )
