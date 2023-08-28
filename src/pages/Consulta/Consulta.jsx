@@ -5,25 +5,36 @@ import DataTable, { createTheme } from "react-data-table-component"
 export function Consulta() {
     const columns = [
         {
-            name: "tipo",
+            name: "Tipo",
             selector: (row) => row.tipo,
+            width: "70px",
+            center: true,
         },
         {
-            name: "numero",
+            name: "Número",
             selector: (row) => row.numero,
+            width: "70px",
             sortable: true,
         },
         {
-            name: "edicao",
+            name: "Edição",
             selector: (row) => row.edicao,
+            width: "70px",
         },
         {
-            name: "titulo",
+            name: "Titulo",
             selector: (row) => row.titulo,
+            width: "350px",
         },
         {
-            name: "status",
+            name: "Homologação",
+            selector: (row) => row.be_data,
+            width: "120px",
+        },
+        {
+            name: "Status",
             selector: (row) => row.status,
+            center: true,
         },
     ]
 
@@ -58,7 +69,7 @@ export function Consulta() {
                 text: "#FFFFFF",
             },
             divider: {
-                default: "#073642",
+                default: "#5e5c5c",
             },
             action: {
                 button: "#af1111",
@@ -72,14 +83,14 @@ export function Consulta() {
     const customStyles = {
         rows: {
             style: {
-                minHeight: "25px", // override the row height
+                minHeight: "35px", // override the row height
             },
         },
         headCells: {
             style: {
-                minHeight: "30px",
-                paddingLeft: "6px", // override the cell padding for head cells
-                paddingRight: "6px",
+                minHeight: "20px",
+                paddingLeft: "5px", // override the cell padding for head cells
+                paddingRight: "5px",
             },
         },
         cells: {
@@ -96,7 +107,7 @@ export function Consulta() {
                 <div className="legenda">
                     <legend>Consulta de NEB/T</legend>
                 </div>
-                <div>
+                <div className="tabela">
                     <DataTable
                         columns={columns}
                         data={data}

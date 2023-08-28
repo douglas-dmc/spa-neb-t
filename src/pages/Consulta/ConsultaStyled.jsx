@@ -32,21 +32,38 @@ export const ConsultaContainer = styled.main`
         grid-area: legenda;
     }
 
-    div:nth-child(2) {
+    .tabela {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 10px 35px;
-        margin: 0 auto;
+        gap: 10px;
+        padding: 15px 20px;
         border: 1px solid gray;
         border-radius: 0 0 8px 8px;
-        /* height: 300px; */
-        /* width: 1000px; */
-        /* background: linear-gradient(
+        font-size: 1rem !important;
+        background: linear-gradient(
             to left top,
             var(--bg-color-gradiente1),
             var(--bg-color-gradiente2) 30%,
             var(--bg-color-gradiente3)
-        ); */
+        );
     }
+
+    .tabela > div {
+        border-radius: 8px;
+    }
+
+   .tabela .sc-gXCJSa {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem !important;
+    height: 10px !important;
+   }
+
+   /* .tabela .rdt_TableFooter {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem !important;
+    height: 10px !important;
+   } */
 `
