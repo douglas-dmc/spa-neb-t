@@ -26,12 +26,12 @@ export const Nav = styled.nav`
         border-right: 1px solid var(--color-font-navbar);
     }
     
-    li:not(:nth-child(5)):hover {
+    li:not(:nth-child(6)):hover {
         background-color: var(--color-font-navbar);
         color: var(--bg-color-navbar);
     }
 
-    li:nth-child(5) {
+    li:nth-child(6) {
         border-right: none;
         cursor: context-menu;
         margin-left: auto;

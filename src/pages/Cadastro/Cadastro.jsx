@@ -196,6 +196,7 @@ export function Cadastro() {
                     <input
                         {...register("bi_numero", { valueAsNumber: true })}
                         type="number"
+                        max="350"
                         placeholder="Número do BI"
                     />
 
@@ -208,6 +209,7 @@ export function Cadastro() {
                     <input
                         {...register("be_numero", { valueAsNumber: true })}
                         type="number"
+                        max="350"
                         placeholder="Número do BE"
                     />
 

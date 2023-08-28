@@ -68,6 +68,7 @@ export const CadForm = styled.main`
         padding: 7px;
         margin: 0;
         margin-top: 10px;
+        color: #5e5c5c;
         font-size: 0.9rem;
         border: 1px solid gray;
         border-radius: 4px;
