@@ -37,7 +37,7 @@ export const Nav = styled.nav`
         margin-left: auto;
     }
 
-    li i {
+    li i, li .iconNavbar {
         margin-right: 10px;
     }
 

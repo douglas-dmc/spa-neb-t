@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom"
 import { Nav } from "./NavBarStyled"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+    faFloppyDisk,
+    faGear,
+    faMagnifyingGlass,
+    faPencil,
+    faRightFromBracket,
+} from "@fortawesome/free-solid-svg-icons"
 
 export function NavBar() {
     return (
@@ -7,23 +15,36 @@ export function NavBar() {
             <ul>
                 <li>
                     <Link to="/cadastro">
-                        <i className="bi bi-save-fill"></i>Cadastro
+                        <FontAwesomeIcon
+                            className="iconNavbar"
+                            icon={faFloppyDisk}
+                        />
+                        Cadastro
                     </Link>
                 </li>
 
                 <li>
                     <Link to="/consulta">
-                        <i className="bi bi-search"></i>Consulta
+                        <FontAwesomeIcon
+                            className="iconNavbar"
+                            icon={faMagnifyingGlass}
+                        />
+                        Consulta
                     </Link>
                 </li>
                 <li>
                     <Link>
-                        <i className="bi bi-pencil-fill"></i>Edição
+                        <FontAwesomeIcon
+                            className="iconNavbar"
+                            icon={faPencil}
+                        />
+                        Edição
                     </Link>
                 </li>
                 <li>
                     <Link>
-                        <i className="bi bi-gear-fill"></i>Administração
+                        <FontAwesomeIcon className="iconNavbar" icon={faGear} />
+                        Administração
                     </Link>
                 </li>
                 <li>
@@ -35,7 +56,11 @@ export function NavBar() {
                 <li>Olá, Douglas Marques da Costa</li>
                 <li>
                     <Link>
-                        <i className="bi bi-box-arrow-right"></i>Sair
+                        <FontAwesomeIcon
+                            className="iconNavbar"
+                            icon={faRightFromBracket}
+                        />
+                        Sair
                     </Link>
                 </li>
             </ul>

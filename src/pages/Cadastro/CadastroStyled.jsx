@@ -20,7 +20,7 @@ export const CadForm = styled.main`
     }
 
     fieldset legend {
-        font-family: "Franklin Gothic Medium", Arial, sans-serif;
+        font-family: Arial, sans-serif;
         color: var(--color-font-title-form);
         font-size: 1.1rem;
         background-color: var(--bg-color-title-form);
@@ -120,7 +120,7 @@ export const CadForm = styled.main`
         grid-column-end: 5;
         grid-area: status;
         color: var(--bg-color-button);
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin-top: 10px;
         align-self: center;
         accent-color: var(--bg-color-button);
@@ -208,7 +208,7 @@ export const CadForm = styled.main`
     }
 
     form button {
-        font-family: "Franklin Gothic Medium", Arial, sans-serif;
+        font-family: Arial, sans-serif;
         font-size: 1rem;
         background-color: var(--bg-color-button);
         color: var(--color-font-button);
@@ -220,7 +220,7 @@ export const CadForm = styled.main`
         width: 130px;
     }
 
-    form button i {
+    form button i, .btn_submit {
         margin-right: 10px;
     }
 

@@ -4,8 +4,10 @@ export function Contato() {
     return (
         <SobreContainer>
             <fieldset>
-                <legend>Contato para Normas Técnicas</legend>
-                <div>
+                <div className="legenda">
+                    <legend>Contato para Normas Técnicas</legend>
+                </div>
+                <div className="contato">
                     <h2>Centro Tecnológico do Exército</h2>
                     <h3>Seção de Normalização</h3>
                     <p>

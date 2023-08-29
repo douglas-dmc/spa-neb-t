@@ -2,31 +2,37 @@ import styled from "styled-components"
 
 export const SobreContainer = styled.main`
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 74vh;
 
     fieldset {
-        display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         border: none;
     }
 
+    .legenda {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: "legenda legenda legenda legenda";
+    }
+
     fieldset legend {
-        font-family: "Franklin Gothic Medium", Arial, sans-serif;
+        font-family: Arial, sans-serif;
         color: var(--color-font-title-form);
         font-size: 1.1rem;
         background-color: var(--bg-color-title-form);
-        padding: 10px 38px 10px 58px;
+        padding: 10px 55px;
         margin: 0;
         border-radius: 15px 15px 0 0;
-        width: 78.6%;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-area: legenda;
     }
 
-    div {
+    .contato {
         display: flex;
         flex-direction: column;
         padding: 40px 60px;

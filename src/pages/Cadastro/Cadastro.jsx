@@ -4,6 +4,8 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { cadastroSchema } from "../../schemas/cadastroSchema"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFloppyDisk } from "@fortawesome/free-solid-svg-icons"
 
 export function Cadastro() {
     const {
@@ -90,6 +92,22 @@ export function Cadastro() {
             .catch((error) => console.log(error))
     }, [])
 
+    const [edicao, setEdicao] = useState([])
+
+    useEffect(() => {
+        fetch("http://localhost:5000/edicao", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((result) => result.json())
+            .then((data) => {
+                setEdicao(data)
+            })
+            .catch((error) => console.log(error))
+    }, [])
+
     return (
         <CadForm>
             <fieldset>
@@ -144,21 +162,13 @@ export function Cadastro() {
 
                     <select {...register("edicao")} required>
                         <option value="" hidden>
-                            Revisões
+                            Alterações
                         </option>
-                        <option value="NR">Não revisada</option>
-                        <option value="A">A</option>
-                        <option value="A M1">A M1</option>
-                        <option value="A M2">A M2</option>
-                        <option value="A M3">A M3</option>
-                        <option value="B">B</option>
-                        <option value="B M1">B M1</option>
-                        <option value="B M2">B M2</option>
-                        <option value="B M3">B M3</option>
-                        <option value="C">C</option>
-                        <option value="C M1">C M1</option>
-                        <option value="C M2">C M2</option>
-                        <option value="C M3">C M3</option>
+                        {edicao.map((option) => (
+                            <option value={option.id} key={option.id}>
+                                {option.name}
+                            </option>
+                        ))}
                     </select>
 
                     <div className="status">
@@ -258,7 +268,11 @@ export function Cadastro() {
                             <i className="bi bi-trash-fill"></i>Limpar
                         </button>
                         <button type="submit">
-                            <i className="bi bi-save-fill"></i>Cadastrar
+                            <FontAwesomeIcon
+                                className="btn_submit"
+                                icon={faFloppyDisk}
+                            />
+                            Cadastrar
                         </button>
                     </div>
                 </form>
