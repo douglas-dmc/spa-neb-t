@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { Cadastro } from "./pages/Cadastro/Cadastro.jsx"
 import { Contato } from "./pages/Contato/Contato.jsx"
 import ErrorPage from "./pages/ErrorPage/ErrorPage.jsx"
+import { Consulta } from "./pages/Consulta/Consulta.jsx"
 
 const router = createBrowserRouter([
     {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
             {   
                 path: "cadastro", 
                 element: <Cadastro />
+            },
+            {   
+                path: "consulta", 
+                element: <Consulta />
             },
             {
                 path: "contato",

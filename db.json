@@ -5,9 +5,13 @@
       "objetivo": "Esta norma estabele a estabilidade quimica",
       "tipo": "M",
       "numero": 255,
-      "arquivo": {
-        "0": {}
-      },
+      "edicao": "A",
+      "status": "ativa",
+      "bi_numero": 123,
+      "bi_data": "2022-11-23",
+      "be_numero": 23,
+      "be_data": "2023-01-26",
+      "arquivo": {},
       "id": 1
     },
     {
@@ -15,9 +19,13 @@
       "objetivo": "Esta norma define as condições para aceitação",
       "tipo": "E",
       "numero": 321,
-      "arquivo": {
-        "0": {}
-      },
+      "edicao": "A M1",
+      "status": "ativa",
+      "bi_numero": 23,
+      "bi_data": "2022-11-23",
+      "be_numero": 53,
+      "be_data": "2023-01-26",
+      "arquivo": {},
       "id": 2
     },
     {
@@ -25,9 +33,13 @@
       "objetivo": "Esta norma estabelece as condições para a aceitação",
       "tipo": "E",
       "numero": 267,
-      "arquivo": {
-        "0": {}
-      },
+      "edicao": "B M1",
+      "bi_numero": 213,
+      "bi_data": "2022-11-23",
+      "be_numero": 57,
+      "be_data": "2023-01-26",
+      "status": "ativa",
+      "arquivo": {},
       "id": 3
     },
     {
@@ -35,29 +47,41 @@
       "objetivo": "Esta norma prescreve as condições exigiveis",
       "tipo": "Pr",
       "numero": 23,
-      "arquivo": {
-        "0": {}
-      },
+      "edicao": "M1",
+      "bi_numero": 41,
+      "bi_data": "2021-11-23",
+      "be_numero": 27,
+      "be_data": "2022-01-26",
+      "status": "ativa",
+      "arquivo": {},
       "id": 4
     },
     {
-      "titulo": "Fuzil",
+      "titulo": "Fuzil 5,56",
       "objetivo": "Esta norma prescreve as caracteristicas do fuzil 7,62",
       "tipo": "E",
       "numero": 111,
-      "arquivo": {
-        "0": {}
-      },
+      "edicao": "M1",
+      "bi_numero": 3,
+      "bi_data": "2021-09-23",
+      "be_numero": 57,
+      "be_data": "2022-01-16",
+      "status": "ativa",
+      "arquivo": {},
       "id": 19
     },
     {
-      "titulo": "Fuzil",
-      "objetivo": "ddddddddddddddddddd",
+      "titulo": "Fuzil 7,62",
+      "objetivo": "Esta norma",
       "tipo": "E",
       "numero": 23,
-      "arquivo": {
-        "0": {}
-      },
+      "edicao": "NA",
+      "bi_numero": 23,
+      "bi_data": "2022-11-23",
+      "be_numero": 71,
+      "be_data": "2023-01-26",
+      "status": "ativa",
+      "arquivo": {},
       "id": 20
     },
     {
@@ -66,31 +90,26 @@
       "tipo": "M",
       "numero": 133,
       "edicao": "B",
-      "arquivo": {
-        "0": {}
-      },
-      "bi_numero": "BI-CTEx nº 26",
+      "arquivo": {},
+      "bi_numero": 26,
       "bi_data": "2023-04-11",
-      "be_numero": "BE nº 11",
+      "be_numero": 11,
       "be_data": "2023-05-23",
+      "status": "cancelada",
       "id": 21
     },
     {
-      "id": 22
-    },
-    {
-      "titulo": "Petróleo",
-      "objetivo": "Esta nora descreve",
-      "tipo": "Pr",
-      "numero": 123,
-      "edicao": "",
-      "arquivo": {
-        "0": {}
-      },
-      "bi_numero": "",
-      "bi_data": "",
-      "be_numero": "",
-      "be_data": "",
+      "titulo": "Pneus de viaturas",
+      "objetivo": "Esta norma descreve",
+      "tipo": "M",
+      "numero": 2,
+      "edicao": "A",
+      "arquivo": {},
+      "bi_numero": 123,
+      "bi_data": "2022-11-23",
+      "be_numero": 23,
+      "be_data": "2023-01-26",
+      "status": "ativa",
       "id": 22
     },
     {
@@ -99,13 +118,12 @@
       "tipo": "C",
       "numero": 12,
       "edicao": "A M1",
-      "arquivo": {
-        "0": {}
-      },
-      "bi_numero": "BI-CTEx nº 02",
+      "arquivo": {},
+      "bi_numero": 3,
       "bi_data": "2023-02-06",
-      "be_numero": "BE nº 49",
+      "be_numero": 39,
       "be_data": "2023-05-09",
+      "status": "cancelada",
       "id": 23
     },
     {
@@ -114,13 +132,12 @@
       "tipo": "C",
       "numero": 56,
       "edicao": "A",
-      "arquivo": {
-        "0": {}
-      },
-      "bi_numero": "BI-CTEx nº 73",
+      "arquivo": {},
+      "bi_numero": 73,
       "bi_data": "2023-08-01T00:00:00.000Z",
-      "be_numero": "BE nº 19",
+      "be_numero": 19,
       "be_data": "2023-08-16T00:00:00.000Z",
+      "status": "ativa",
       "id": 24
     },
     {
@@ -129,13 +146,12 @@
       "tipo": "E",
       "numero": 29,
       "edicao": "A",
-      "arquivo": {
-        "0": {}
-      },
-      "bi_numero": "BI-CTEx nº 58",
+      "arquivo": {},
+      "bi_numero": 58,
       "bi_data": "2023-08-01T00:00:00.000Z",
-      "be_numero": "BE nº 37",
+      "be_numero": 37,
       "be_data": "2023-08-16T00:00:00.000Z",
+      "status": "ativa",
       "id": 25
     },
     {
@@ -144,13 +160,12 @@
       "tipo": "E",
       "numero": 256,
       "edicao": "B",
-      "arquivo": {
-        "0": {}
-      },
-      "bi_numero": "BI-CTEx nº 02",
+      "arquivo": {},
+      "bi_numero": 2,
       "bi_data": "2023-06-12T00:00:00.000Z",
-      "be_numero": "BE nº 13",
+      "be_numero": 9,
       "be_data": "2023-07-26T00:00:00.000Z",
+      "status": "ativa",
       "id": 26
     },
     {
@@ -159,13 +174,12 @@
       "tipo": "Pr",
       "numero": 22,
       "edicao": "A M3",
-      "arquivo": {
-        "0": {}
-      },
-      "bi_numero": "BI-CTEx nº 50",
+      "arquivo": {},
+      "bi_numero": 52,
       "bi_data": "2023-08-01T00:00:00.000Z",
-      "be_numero": "BE nº 152",
+      "be_numero": 102,
       "be_data": "2023-08-16T00:00:00.000Z",
+      "status": "ativa",
       "id": 27
     },
     {
@@ -173,14 +187,13 @@
       "objetivo": "Esta norma descreve",
       "tipo": "E",
       "numero": 345,
-      "edicao": "",
-      "arquivo": {
-        "0": {}
-      },
-      "bi_numero": "BI-CTEx nº 02",
+      "edicao": "NA",
+      "arquivo": {},
+      "bi_numero": 2,
       "bi_data": "2023-08-01T00:00:00.000Z",
-      "be_numero": "BE nº 12",
+      "be_numero": 12,
       "be_data": "2023-08-15T00:00:00.000Z",
+      "status": "ativa",
       "id": 28
     },
     {
@@ -189,13 +202,12 @@
       "tipo": "M",
       "numero": 32,
       "edicao": "A M2",
-      "arquivo": {
-        "0": {}
-      },
-      "bi_numero": "BI-CTEx nº 50",
+      "arquivo": {},
+      "bi_numero": 51,
       "bi_data": "2023-03-07T00:00:00.000Z",
-      "be_numero": "BE nº 13",
+      "be_numero": 13,
       "be_data": "2023-06-26T00:00:00.000Z",
+      "status": "ativa",
       "id": 29
     },
     {
@@ -203,14 +215,13 @@
       "objetivo": "Esta norma define as espeificações",
       "tipo": "E",
       "numero": 56,
-      "edicao": "",
-      "arquivo": {
-        "0": {}
-      },
-      "bi_numero": "BI-CTEx nº 55",
+      "edicao": "NA",
+      "arquivo": {},
+      "bi_numero": 125,
       "bi_data": "2023-06-06T00:00:00.000Z",
-      "be_numero": "BE nº 48",
+      "be_numero": 48,
       "be_data": "2023-07-11T00:00:00.000Z",
+      "status": "ativa",
       "id": 30
     },
     {
@@ -218,14 +229,13 @@
       "objetivo": "Esta norma descreve",
       "tipo": "E",
       "numero": 12,
-      "edicao": "",
-      "arquivo": {
-        "0": {}
-      },
-      "bi_numero": "BI-CTEx nº 123",
+      "edicao": "NA",
+      "arquivo": {},
+      "bi_numero": 126,
       "bi_data": "2023-08-01T00:00:00.000Z",
-      "be_numero": "BE nº 13",
+      "be_numero": 17,
       "be_data": "2023-08-14T00:00:00.000Z",
+      "status": "ativa",
       "id": 31
     },
     {
@@ -234,13 +244,12 @@
       "tipo": "Pr",
       "numero": 123,
       "edicao": "B M1",
-      "arquivo": {
-        "0": {}
-      },
-      "bi_numero": "BI-CTEx nº 50",
+      "arquivo": {},
+      "bi_numero": 50,
       "bi_data": "2023-06-12T00:00:00.000Z",
-      "be_numero": "BE nº 11",
+      "be_numero": 11,
       "be_data": "2023-07-18T00:00:00.000Z",
+      "status": "cancelada",
       "id": 32
     },
     {
@@ -248,14 +257,13 @@
       "objetivo": "Esta norma estabelece",
       "tipo": "E",
       "numero": 223,
-      "edicao": "",
-      "arquivo": {
-        "0": {}
-      },
-      "bi_numero": "BI-CTEx nº 50",
+      "edicao": "NA",
+      "arquivo": {},
+      "bi_numero": 50,
       "bi_data": "2023-08-02T00:00:00.000Z",
-      "be_numero": "BE nº 43",
+      "be_numero": 43,
       "be_data": "2023-08-17T00:00:00.000Z",
+      "status": "ativa",
       "id": 33
     },
     {
@@ -263,9 +271,13 @@
       "objetivo": "Esta norma",
       "tipo": "M",
       "numero": 34,
-      "arquivo": {
-        "0": {}
-      },
+      "edicao": "NA",
+      "bi_numero": 30,
+      "bi_data": "2023-08-02T00:00:00.000Z",
+      "be_numero": 23,
+      "be_data": "2023-08-17T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
       "id": 34
     },
     {
@@ -273,9 +285,13 @@
       "objetivo": "Esta norma descreve",
       "tipo": "Pr",
       "numero": 76,
-      "arquivo": {
-        "0": {}
-      },
+      "edicao": "NR",
+      "bi_numero": 20,
+      "bi_data": "2023-08-02T00:00:00.000Z",
+      "be_numero": 43,
+      "be_data": "2023-08-17T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
       "id": 35
     },
     {
@@ -283,9 +299,13 @@
       "objetivo": "Esta norma",
       "tipo": "E",
       "numero": 344,
-      "arquivo": {
-        "0": {}
-      },
+      "edicao": "NA",
+      "bi_numero": 34,
+      "bi_data": "2023-08-02T00:00:00.000Z",
+      "be_numero": 28,
+      "be_data": "2023-08-17T00:00:00.000Z",
+      "status": "cancelada",
+      "arquivo": {},
       "id": 36
     },
     {
@@ -293,9 +313,13 @@
       "objetivo": "Esta norma",
       "tipo": "E",
       "numero": 267,
-      "arquivo": {
-        "0": {}
-      },
+      "edicao": "M2",
+      "bi_numero": 10,
+      "bi_data": "2023-08-02T00:00:00.000Z",
+      "be_numero": 3,
+      "be_data": "2023-08-17T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
       "id": 37
     },
     {
@@ -303,11 +327,12 @@
       "objetivo": "Esta norma",
       "tipo": "M",
       "numero": 33,
-      "bi_numero": "BI-CTEx nº 50",
-      "be_numero": "BE nº 43",
-      "arquivo": {
-        "0": {}
-      },
+      "bi_numero": 50,
+      "be_numero": 43,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-14T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
       "id": 38
     },
     {
@@ -315,13 +340,12 @@
       "objetivo": "esta norma",
       "tipo": "M",
       "numero": 444,
-      "bi_numero": "BI-CTEx nº 50",
-      "be_numero": "BE nº 11",
+      "bi_numero": 50,
+      "be_numero": 11,
       "bi_data": "2023-08-01T00:00:00.000Z",
       "be_data": "2023-08-14T00:00:00.000Z",
-      "arquivo": {
-        "0": {}
-      },
+      "status": "ativa",
+      "arquivo": {},
       "id": 39
     },
     {
@@ -329,75 +353,434 @@
       "objetivo": "Esta norma",
       "tipo": "E",
       "numero": 345,
-      "edicao": "",
-      "bi_numero": "BI-CTEx nº 23",
-      "be_numero": "BE nº 194",
+      "edicao": "NA",
+      "bi_numero": 23,
+      "be_numero": 194,
       "bi_data": "2023-07-04T00:00:00.000Z",
       "be_data": "2023-08-21T00:00:00.000Z",
-      "arquivo": {
-        "0": {}
-      },
+      "status": "ativa",
+      "arquivo": {},
       "id": 40
     },
     {
-      "titulo": "Teste 10",
-      "objetivo": "Esta norma estabelece",
+      "titulo": "Teste 14",
+      "objetivo": "Esta norma define",
       "tipo": "Pd",
-      "numero": 15,
+      "numero": 19,
       "edicao": "A",
-      "bi_numero": "BI-CTEx nº 72",
-      "be_numero": "BE nº 89",
-      "bi_data": "2023-05-15T00:00:00.000Z",
-      "be_data": "2023-06-20T00:00:00.000Z",
-      "arquivo": {
-        "0": {}
-      },
+      "bi_numero": 127,
+      "be_numero": 42,
+      "bi_data": "2023-03-13T00:00:00.000Z",
+      "be_data": "2023-07-14T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
       "id": 41
     },
     {
-      "titulo": "Teste 11",
-      "objetivo": "Esta norma define",
+      "titulo": "Teste 15",
+      "objetivo": "Esta norma",
       "tipo": "Pd",
-      "numero": 16,
-      "edicao": "A M1",
-      "bi_numero": "BI-CTEx nº 88",
-      "be_numero": "BE nº 54",
-      "bi_data": "2023-07-03T00:00:00.000Z",
-      "be_data": "2023-08-07T00:00:00.000Z",
-      "arquivo": {
-        "0": {}
-      },
+      "numero": 44,
+      "edicao": "A",
+      "bi_numero": 123,
+      "be_numero": 22,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-23T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
       "id": 42
     },
     {
-      "titulo": "teste 12",
-      "objetivo": "Esta norma prescreve",
+      "titulo": "Teste 16",
+      "objetivo": "Esta norma",
       "tipo": "Pr",
-      "numero": 27,
-      "edicao": "",
-      "bi_numero": "BI-CTEx nº 72",
-      "be_numero": "BE nº 54",
-      "bi_data": "2023-07-31T00:00:00.000Z",
-      "be_data": "2023-08-15T00:00:00.000Z",
-      "arquivo": {
-        "0": {}
-      },
+      "numero": 77,
+      "edicao": "A M1",
+      "bi_numero": 81,
+      "be_numero": 66,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-23T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
       "id": 43
     },
     {
-      "titulo": "Teste 13",
+      "titulo": "Teste 17",
+      "objetivo": "Esta norma",
+      "tipo": "Pd",
+      "numero": 77,
+      "edicao": "A",
+      "bi_numero": 83,
+      "be_numero": 68,
+      "bi_data": "2023-08-09T00:00:00.000Z",
+      "be_data": "2023-08-22T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 44
+    },
+    {
+      "titulo": "Teste 18",
       "objetivo": "Esta norma",
       "tipo": "Pr",
-      "numero": 47,
-      "edicao": "",
-      "bi_numero": "BI-CTEx nº 72",
-      "be_numero": "BE nº 89",
-      "bi_data": "2023-07-30T00:00:00.000Z",
-      "be_data": "2023-08-11T00:00:00.000Z",
-      "arquivo": {
-        "0": {}
-      },
-      "id": 44
+      "numero": 99,
+      "edicao": "A",
+      "bi_numero": 129,
+      "be_numero": 97,
+      "bi_data": "2023-04-19T00:00:00.000Z",
+      "be_data": "2023-06-14T00:00:00.000Z",
+      "status": "cancelada",
+      "arquivo": {},
+      "id": 45
+    },
+    {
+      "titulo": "Teste 19 ",
+      "objetivo": "Esta norma descreve",
+      "tipo": "E",
+      "numero": 301,
+      "edicao": "A",
+      "bi_numero": "BI-CTEx nº 53",
+      "be_numero": "BE nº 40",
+      "bi_data": "2023-04-03T00:00:00.000Z",
+      "be_data": "2023-08-07T00:00:00.000Z",
+      "status": "cancelada",
+      "arquivo": {},
+      "id": 46
+    },
+    {
+      "titulo": "Teste 20",
+      "objetivo": "Esta norma",
+      "tipo": "Pd",
+      "numero": 18,
+      "edicao": "B",
+      "bi_numero": "BI-CTEx nº 57",
+      "be_numero": "BE nº 45",
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-22T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 47
+    },
+    {
+      "titulo": "Teste 22",
+      "objetivo": "Esta norma determina",
+      "tipo": "E",
+      "numero": 21,
+      "edicao": "A",
+      "bi_numero": 56,
+      "be_numero": 165,
+      "bi_data": "2023-07-03T00:00:00.000Z",
+      "be_data": "2023-08-07T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 48
+    },
+    {
+      "titulo": "Teste 23",
+      "objetivo": "Esta norma descreve as condições",
+      "tipo": "Pd",
+      "numero": 21,
+      "edicao": "A M1",
+      "bi_numero": 78,
+      "be_numero": 45,
+      "bi_data": "2023-07-24T00:00:00.000Z",
+      "be_data": "2023-08-01T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 49
+    },
+    {
+      "titulo": "Teste 24",
+      "objetivo": "Esta norma define",
+      "tipo": "C",
+      "numero": 23,
+      "edicao": "NA",
+      "bi_numero": 12,
+      "be_numero": 56,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-22T00:00:00.000Z",
+      "status": "cancelada",
+      "arquivo": {},
+      "id": 50
+    },
+    {
+      "titulo": "Teste 25",
+      "objetivo": "Esta norma ",
+      "tipo": "T",
+      "numero": 2,
+      "edicao": "NA",
+      "bi_numero": 26,
+      "be_numero": 67,
+      "bi_data": "2023-04-03T00:00:00.000Z",
+      "be_data": "2023-08-08T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 51
+    },
+    {
+      "titulo": "Teste 26",
+      "objetivo": "Esta norma",
+      "tipo": "M",
+      "numero": 222,
+      "edicao": "NA",
+      "bi_numero": 78,
+      "be_numero": 34,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-22T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 52
+    },
+    {
+      "titulo": "Teste 27",
+      "objetivo": "Esta norma",
+      "tipo": "Pr",
+      "numero": 33,
+      "edicao": "A",
+      "bi_numero": 59,
+      "be_numero": 45,
+      "bi_data": "2023-08-03T00:00:00.000Z",
+      "be_data": "2023-08-15T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 53
+    },
+    {
+      "titulo": "Teste 28",
+      "objetivo": "Esta norma",
+      "tipo": "Pd",
+      "numero": 17,
+      "edicao": "NA",
+      "bi_numero": 55,
+      "be_numero": 34,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-15T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 54
+    },
+    {
+      "titulo": "Teste 29",
+      "objetivo": "Esta norma",
+      "tipo": "Pr",
+      "numero": 66,
+      "edicao": "A",
+      "bi_numero": 23,
+      "be_numero": 77,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-22T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 55
+    },
+    {
+      "titulo": "Teste 30",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 345,
+      "edicao": "A M2",
+      "bi_numero": 79,
+      "be_numero": 45,
+      "bi_data": "2023-08-03T00:00:00.000Z",
+      "be_data": "2023-08-15T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 56
+    },
+    {
+      "titulo": "Teste 31",
+      "objetivo": "Esta norma ",
+      "tipo": "Pr",
+      "numero": 41,
+      "edicao": "NR",
+      "bi_numero": 79,
+      "be_numero": 34,
+      "bi_data": "2023-07-03T00:00:00.000Z",
+      "be_data": "2023-08-14T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 57
+    },
+    {
+      "titulo": "Teste 32",
+      "objetivo": "Esta norma",
+      "tipo": "Pd",
+      "numero": 18,
+      "edicao": "NA",
+      "bi_numero": 66,
+      "be_numero": 23,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-16T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 58
+    },
+    {
+      "titulo": "Teste 33",
+      "objetivo": "Esta norma",
+      "tipo": "Pd",
+      "numero": 18,
+      "edicao": "NA",
+      "bi_numero": 123,
+      "be_numero": 234,
+      "bi_data": "2022-11-15T00:00:00.000Z",
+      "be_data": "2023-06-13T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 59
+    },
+    {
+      "titulo": "Teste 34",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 34,
+      "edicao": "NA",
+      "bi_numero": 33,
+      "be_numero": 45,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-07T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 60
+    },
+    {
+      "titulo": "Teste 35",
+      "objetivo": "Esta norma",
+      "tipo": "Pr",
+      "numero": 42,
+      "edicao": "NA",
+      "bi_numero": 167,
+      "be_numero": 91,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-23T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 61
+    },
+    {
+      "titulo": "Teste 36",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 345,
+      "edicao": "NA",
+      "bi_numero": 88,
+      "be_numero": 234,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-15T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 62
+    },
+    {
+      "titulo": "Teste 37",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 333,
+      "edicao": "NA",
+      "bi_numero": 45,
+      "be_numero": 222,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-22T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 63
+    },
+    {
+      "titulo": "Teste 38",
+      "objetivo": "Esta norma",
+      "tipo": "M",
+      "numero": 34,
+      "edicao": "A M1",
+      "bi_numero": 46,
+      "be_numero": 57,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-22T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 64
+    },
+    {
+      "titulo": "Teste 39",
+      "objetivo": "Esta norma ",
+      "tipo": "Pr",
+      "numero": 78,
+      "edicao": "NR",
+      "bi_numero": 123,
+      "be_numero": 345,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-22T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 65
+    },
+    {
+      "titulo": "Teste 41",
+      "objetivo": "Esta norma",
+      "tipo": "Pd",
+      "numero": 17,
+      "edicao": "NA",
+      "bi_numero": 98,
+      "be_numero": 187,
+      "bi_data": "2023-08-03T00:00:00.000Z",
+      "be_data": "2023-08-27T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 67
+    },
+    {
+      "titulo": "Teste 40",
+      "objetivo": "Esta norma",
+      "tipo": "M",
+      "numero": 221,
+      "edicao": "M1",
+      "bi_numero": 82,
+      "be_numero": 31,
+      "bi_data": "2023-07-03T00:00:00.000Z",
+      "be_data": "2023-07-31T00:00:00.000Z",
+      "status": "ativa",
+      "arquivo": {},
+      "id": 68
+    },
+    {
+      "titulo": "Teste 42",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 229,
+      "edicao": "A M1",
+      "bi_numero": 13,
+      "be_numero": 45,
+      "bi_data": "2020-06-16T00:00:00.000Z",
+      "be_data": "2020-09-15T00:00:00.000Z",
+      "status": "cancelada",
+      "arquivo": {},
+      "id": 69
+    },
+    {
+      "titulo": "Teste 43",
+      "objetivo": "Esta norma",
+      "tipo": "Pr",
+      "numero": 32,
+      "edicao": "M1",
+      "bi_numero": 121,
+      "be_numero": 24,
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-14T00:00:00.000Z",
+      "status": "cancelada",
+      "arquivo": {},
+      "id": 70
+    },
+    {
+      "titulo": "Teste 44",
+      "objetivo": "Esta norma",
+      "tipo": "C",
+      "numero": 16,
+      "edicao": "NR",
+      "bi_numero": 67,
+      "be_numero": 25,
+      "bi_data": "2023-08-08T00:00:00.000Z",
+      "be_data": "2023-08-17T00:00:00.000Z",
+      "status": "cancelada",
+      "arquivo": {},
+      "id": 71
     }
   ],
   "tipos": [
@@ -428,6 +811,72 @@
     {
       "id": "T",
       "name": "Terminologia"
+    }
+  ],
+  "edicao": [
+    {
+      "id": "NR",
+      "name": "Não alterada"
+    },
+    {
+      "id": "M1",
+      "name": "M1"
+    },
+    {
+      "id": "M2",
+      "name": "M2"
+    },
+    {
+      "id": "M3",
+      "name": "M3"
+    },
+    {
+      "id": "A",
+      "name": "A"
+    },
+    {
+      "id": "A M1",
+      "name": "A M1"
+    },
+    {
+      "id": "A M2",
+      "name": "A M2"
+    },
+    {
+      "id": "A M3",
+      "name": "A M3"
+    },
+    {
+      "id": "B",
+      "name": "B"
+    },
+    {
+      "id": "B M1",
+      "name": "B M1"
+    },
+    {
+      "id": "B M2",
+      "name": "B M2"
+    },
+    {
+      "id": "B M3",
+      "name": "B M3"
+    },
+    {
+      "id": "C",
+      "name": "C"
+    },
+    {
+      "id": "C M1",
+      "name": "C M1"
+    },
+    {
+      "id": "C M2",
+      "name": "C M2"
+    },
+    {
+      "id": "C M3",
+      "name": "C M3"
     }
   ]
 }

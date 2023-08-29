@@ -3,10 +3,11 @@ import styled from "styled-components"
 export const Nav = styled.nav`
     display: flex;
     flex-direction: row;
-    justify-content: center;
     margin: 0 auto;
 
     ul {
+        display: flex;
+        align-items: center;
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -16,46 +17,45 @@ export const Nav = styled.nav`
     }
 
     li {
-        display: inline-flex;
-        justify-content: center;
-        padding: 0;
+        justify-items: center;
+        margin: 0;
+        padding: 10px 15px;
         font-size: 1rem;
         cursor: pointer;
-        border-right: 1px solid var(--color-font-navbar);
         transition: background .4s;
+        border-right: 1px solid var(--color-font-navbar);
+    }
+    
+    li:not(:nth-child(6)):hover {
+        background-color: var(--color-font-navbar);
+        color: var(--bg-color-navbar);
+    }
+
+    li:nth-child(6) {
+        border-right: none;
+        cursor: context-menu;
+        margin-left: auto;
+    }
+
+    li i, li .iconNavbar {
+        margin-right: 10px;
+    }
+
+    li:last-child {
+        border-right: none;
+        margin-left: auto;
+        cursor: context-menu;
+        padding: 10px 20px;
     }
 
     li a {
         color: var(--color-font-navbar);
         text-decoration: none;
         transition: background .4s;
-        padding: 10px 20px;
-    }
-
-    li:first-child {
-        margin-left: 50px;
-        border-left: 1px solid #fff;
-    }
-
-    li:not(:last-child):hover {
-        background-color: var(--color-font-navbar);
-        color: var(--bg-color-navbar);
-    }
-    
-    li a:hover {
-        color: var(--bg-color-navbar);
-    }
-
-    li:last-child {
-        border-right: none;
-        float: right;
-        margin-right: 20px;
-        align-content: center;
-        cursor: context-menu;
         padding: 10px 15px;
     }
 
-    li i {
-        margin-right: 10px;
+    li a:hover {
+        color: var(--bg-color-navbar);
     }
 `
