@@ -17,6 +17,11 @@ export const cadastroSchema = z.object({
             },
         })
         .positive({ message: "O número da norma deve ser maior que zero" }),
+    edicao: z.string(),
+    bi_numero: z.string(),
+    be_numero: z.string(),
+    bi_data: z.date(),
+    be_data: z.date(),
     arquivo: z
         .any()
         .refine((files) => files?.length == 1, "Selecione o arquivo da norma")

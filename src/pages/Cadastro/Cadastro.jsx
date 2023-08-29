@@ -9,7 +9,7 @@ export function Cadastro() {
     const {
         register,
         handleSubmit,
-        watch,
+        // watch,
         reset,
         formState: { errors },
     } = useForm({
@@ -22,7 +22,7 @@ export function Cadastro() {
             tipo: "",
             numero: "",
             edicao: "",
-            arquivo: "",
+            arquivo: {},
             bi_numero: "",
             bi_data: "",
             be_numero: "",
@@ -30,12 +30,11 @@ export function Cadastro() {
         },
     })
 
-    console.log("errors", errors)
-
     const navigate = useNavigate()
 
-    const onSubmit = () => {
-        const cadastros = watch()
+    const onSubmit = (cadastros) => {
+
+        // const arquivo = watch("arquivo")
 
         fetch("http://localhost:5000/cadastros", {
             method: "POST",
@@ -48,14 +47,16 @@ export function Cadastro() {
             .then((result) => result.json())
             .then((data) => {
                 console.log(data)
-                navigate("/cadastro", {message: "Norma cadastrada com sucesso!"})
+                navigate("/cadastro", {state:
+                    {message: "Norma cadastrada com sucesso!"},
+                })
             })
             .catch((error) => console.log(error))
 
         reset()
     }
 
-    console.log(watch())
+    //console.log(watch())
 
     const [tipo, setTipo] = useState([])
 
@@ -116,7 +117,7 @@ export function Cadastro() {
 
                         <input
                             {...register("numero", {
-                                setValueAs: (value) => parseInt(value, 10),
+                                valueAsNumber: true,
                             })}
                             type="number"
                             placeholder="Número da norma"
@@ -162,7 +163,7 @@ export function Cadastro() {
                         />
 
                         <input
-                            {...register("bi_data")}
+                            {...register("bi_data", { valueAsDate: true })}
                             type="date"
                         />
 
@@ -173,7 +174,7 @@ export function Cadastro() {
                         />
 
                         <input
-                            {...register("be_data")}
+                            {...register("be_data", { valueAsDate: true })}
                             type="date"
                         />
                     </div>

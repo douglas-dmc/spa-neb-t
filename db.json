@@ -83,15 +83,321 @@
       "objetivo": "Esta nora descreve",
       "tipo": "Pr",
       "numero": 123,
+      "edicao": "",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "",
+      "bi_data": "",
+      "be_numero": "",
+      "be_data": "",
+      "id": 22
+    },
+    {
+      "titulo": "Desenho técnico",
+      "objetivo": "Esta norma classifica os denhos técnicos no EB.",
+      "tipo": "C",
+      "numero": 12,
+      "edicao": "A M1",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 02",
+      "bi_data": "2023-02-06",
+      "be_numero": "BE nº 49",
+      "be_data": "2023-05-09",
+      "id": 23
+    },
+    {
+      "titulo": "Explosivo plástico",
+      "objetivo": "Esta norma define os tipos de explosivos plásticos usados no EB.",
+      "tipo": "C",
+      "numero": 56,
+      "edicao": "A",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 73",
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_numero": "BE nº 19",
+      "be_data": "2023-08-16T00:00:00.000Z",
+      "id": 24
+    },
+    {
+      "titulo": "Nitrotolueno",
+      "objetivo": "Esta norma prescreve",
+      "tipo": "E",
+      "numero": 29,
+      "edicao": "A",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 58",
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_numero": "BE nº 37",
+      "be_data": "2023-08-16T00:00:00.000Z",
+      "id": 25
+    },
+    {
+      "titulo": "Metralhadora",
+      "objetivo": "Esta norma prescreve",
+      "tipo": "E",
+      "numero": 256,
+      "edicao": "B",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 02",
+      "bi_data": "2023-06-12T00:00:00.000Z",
+      "be_numero": "BE nº 13",
+      "be_data": "2023-07-26T00:00:00.000Z",
+      "id": 26
+    },
+    {
+      "titulo": "Arma de ar comprimido",
+      "objetivo": "Esta norma fixa os procedimentos",
+      "tipo": "Pr",
+      "numero": 22,
       "edicao": "A M3",
       "arquivo": {
         "0": {}
       },
-      "bi_numero": "BI-CTEx nº 65",
-      "bi_data": "2023-05-08",
-      "be_numero": "BE nº 32",
-      "be_data": "2023-07-10",
-      "id": 23
+      "bi_numero": "BI-CTEx nº 50",
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_numero": "BE nº 152",
+      "be_data": "2023-08-16T00:00:00.000Z",
+      "id": 27
+    },
+    {
+      "titulo": "Cartucho 90mm AE",
+      "objetivo": "Esta norma descreve",
+      "tipo": "E",
+      "numero": 345,
+      "edicao": "",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 02",
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_numero": "BE nº 12",
+      "be_data": "2023-08-15T00:00:00.000Z",
+      "id": 28
+    },
+    {
+      "titulo": "Colete balístico",
+      "objetivo": "Esta norma descreve",
+      "tipo": "M",
+      "numero": 32,
+      "edicao": "A M2",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 50",
+      "bi_data": "2023-03-07T00:00:00.000Z",
+      "be_numero": "BE nº 13",
+      "be_data": "2023-06-26T00:00:00.000Z",
+      "id": 29
+    },
+    {
+      "titulo": "Capacete balístico",
+      "objetivo": "Esta norma define as espeificações",
+      "tipo": "E",
+      "numero": 56,
+      "edicao": "",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 55",
+      "bi_data": "2023-06-06T00:00:00.000Z",
+      "be_numero": "BE nº 48",
+      "be_data": "2023-07-11T00:00:00.000Z",
+      "id": 30
+    },
+    {
+      "titulo": "Prego",
+      "objetivo": "Esta norma descreve",
+      "tipo": "E",
+      "numero": 12,
+      "edicao": "",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 123",
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_numero": "BE nº 13",
+      "be_data": "2023-08-14T00:00:00.000Z",
+      "id": 31
+    },
+    {
+      "titulo": "Teste 1",
+      "objetivo": "Esta norma prescreve o teste 1",
+      "tipo": "Pr",
+      "numero": 123,
+      "edicao": "B M1",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 50",
+      "bi_data": "2023-06-12T00:00:00.000Z",
+      "be_numero": "BE nº 11",
+      "be_data": "2023-07-18T00:00:00.000Z",
+      "id": 32
+    },
+    {
+      "titulo": "Teste 2",
+      "objetivo": "Esta norma estabelece",
+      "tipo": "E",
+      "numero": 223,
+      "edicao": "",
+      "arquivo": {
+        "0": {}
+      },
+      "bi_numero": "BI-CTEx nº 50",
+      "bi_data": "2023-08-02T00:00:00.000Z",
+      "be_numero": "BE nº 43",
+      "be_data": "2023-08-17T00:00:00.000Z",
+      "id": 33
+    },
+    {
+      "titulo": "Teste 3",
+      "objetivo": "Esta norma",
+      "tipo": "M",
+      "numero": 34,
+      "arquivo": {
+        "0": {}
+      },
+      "id": 34
+    },
+    {
+      "titulo": "Teste 4",
+      "objetivo": "Esta norma descreve",
+      "tipo": "Pr",
+      "numero": 76,
+      "arquivo": {
+        "0": {}
+      },
+      "id": 35
+    },
+    {
+      "titulo": "Teste 5",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 344,
+      "arquivo": {
+        "0": {}
+      },
+      "id": 36
+    },
+    {
+      "titulo": "Teste 6",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 267,
+      "arquivo": {
+        "0": {}
+      },
+      "id": 37
+    },
+    {
+      "titulo": "Teste 7",
+      "objetivo": "Esta norma",
+      "tipo": "M",
+      "numero": 33,
+      "bi_numero": "BI-CTEx nº 50",
+      "be_numero": "BE nº 43",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 38
+    },
+    {
+      "titulo": "Teste 8",
+      "objetivo": "esta norma",
+      "tipo": "M",
+      "numero": 444,
+      "bi_numero": "BI-CTEx nº 50",
+      "be_numero": "BE nº 11",
+      "bi_data": "2023-08-01T00:00:00.000Z",
+      "be_data": "2023-08-14T00:00:00.000Z",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 39
+    },
+    {
+      "titulo": "Teste 9",
+      "objetivo": "Esta norma",
+      "tipo": "E",
+      "numero": 345,
+      "edicao": "",
+      "bi_numero": "BI-CTEx nº 23",
+      "be_numero": "BE nº 194",
+      "bi_data": "2023-07-04T00:00:00.000Z",
+      "be_data": "2023-08-21T00:00:00.000Z",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 40
+    },
+    {
+      "titulo": "Teste 10",
+      "objetivo": "Esta norma estabelece",
+      "tipo": "Pd",
+      "numero": 15,
+      "edicao": "A",
+      "bi_numero": "BI-CTEx nº 72",
+      "be_numero": "BE nº 89",
+      "bi_data": "2023-05-15T00:00:00.000Z",
+      "be_data": "2023-06-20T00:00:00.000Z",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 41
+    },
+    {
+      "titulo": "Teste 11",
+      "objetivo": "Esta norma define",
+      "tipo": "Pd",
+      "numero": 16,
+      "edicao": "A M1",
+      "bi_numero": "BI-CTEx nº 88",
+      "be_numero": "BE nº 54",
+      "bi_data": "2023-07-03T00:00:00.000Z",
+      "be_data": "2023-08-07T00:00:00.000Z",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 42
+    },
+    {
+      "titulo": "teste 12",
+      "objetivo": "Esta norma prescreve",
+      "tipo": "Pr",
+      "numero": 27,
+      "edicao": "",
+      "bi_numero": "BI-CTEx nº 72",
+      "be_numero": "BE nº 54",
+      "bi_data": "2023-07-31T00:00:00.000Z",
+      "be_data": "2023-08-15T00:00:00.000Z",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 43
+    },
+    {
+      "titulo": "Teste 13",
+      "objetivo": "Esta norma",
+      "tipo": "Pr",
+      "numero": 47,
+      "edicao": "",
+      "bi_numero": "BI-CTEx nº 72",
+      "be_numero": "BE nº 89",
+      "bi_data": "2023-07-30T00:00:00.000Z",
+      "be_data": "2023-08-11T00:00:00.000Z",
+      "arquivo": {
+        "0": {}
+      },
+      "id": 44
     }
   ],
   "tipos": [

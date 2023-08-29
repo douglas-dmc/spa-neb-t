@@ -20,7 +20,7 @@ export const SobreContainer = styled.main`
         color: var(--color-font-title-form);
         font-size: 1.1rem;
         background-color: var(--bg-color-title-form);
-        padding: 10px 40px 10px 56px;
+        padding: 10px 38px 10px 58px;
         margin: 0;
         border-radius: 15px 15px 0 0;
         width: 78.6%;
