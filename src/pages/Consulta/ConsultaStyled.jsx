@@ -33,39 +33,6 @@ export const ConsultaContainer = styled.main`
         grid-area: legenda;
     }
 
-    .pesquisa {
-        justify-self: flex-end;
-    }
-
-    .pesquisa input {
-        outline: none;
-        padding: 5px;
-        margin-right: 3px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-
-    .pesquisa button {
-        background-color: var(--bg-color-button) !important;
-        color: var(--color-font-button) !important;
-        border: 1px solid var(--bg-color-button);
-        border-radius: 5px;
-        padding: 5px;
-        transition: 0.2s;
-    }
-
-    .pesquisa button:hover {
-        background-color: var(--color-font-button) !important;
-        color: var(--bg-color-button) !important;
-        border: 1px solid var(--color-font-button);
-    }
-
-    .rdt_TableHeadRow {
-        font-weight: bold;
-        color: #000;
-        background-color: #e7e3e3;
-    }
-
     .tabela {
         display: flex;
         flex-direction: column;
@@ -89,7 +56,7 @@ export const ConsultaContainer = styled.main`
     .tabela .sc-gXCJSa {
         border: 1px solid #ccc;
         border-radius: 8px;
-        font-size: .9rem !important;
+        font-size: 0.9rem !important;
         font-weight: bold;
     }
 
@@ -105,4 +72,37 @@ export const ConsultaContainer = styled.main`
         margin: 10px;
     }
 
+    .pesquisa {
+        align-self: flex-end;
+    }
+
+    .pesquisa input {
+        outline: none;
+        padding: 5px;
+        margin-right: 6px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .pesquisa button {
+        background-color: var(--bg-color-button) !important;
+        color: var(--color-font-button) !important;
+        border: 1px solid var(--bg-color-button);
+        border-radius: 5px;
+        padding: 3px 8px;
+        margin-right: 3px;
+        transition: 0.2s;
+    }
+
+    .pesquisa button:hover {
+        background-color: var(--color-font-button) !important;
+        color: var(--bg-color-button) !important;
+        border: 1px solid var(--color-font-button);
+    }
+
+    .rdt_TableHeadRow {
+        font-weight: bold;
+        color: #000;
+        background-color: #e7e3e3;
+    }
 `

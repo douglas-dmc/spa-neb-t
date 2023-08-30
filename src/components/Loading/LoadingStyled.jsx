@@ -16,6 +16,9 @@ export const LoaderContainer = styled.main`
 `
 export const Loader = styled.section`
     padding: 20px 50px;
+    display: flex;
     background-color: #fff;
+    justify-content: center;
+    align-self: center;
 `
 

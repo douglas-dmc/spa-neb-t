@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react"
 import { ConsultaContainer } from "./ConsultaStyled"
-import DataTable, { Alignment, createTheme } from "react-data-table-component"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
+import DataTable, { createTheme } from "react-data-table-component"
 import { Loading } from "../../components/Loading/Loading"
 
 export function Consulta() {
+    const ExpandedComponent = ({ data }) => {
+        <pre>{JSON.stringify(data, null, 2)}</pre>
+        console.log(data)
+    }
+
     const columns = [
         {
             name: "TIPO",
@@ -144,10 +147,9 @@ export function Consulta() {
                 minHeight: "40px",
             },
             pageButtonsStyle: {
-                backgroundColor: 'red',
-            }
+                backgroundColor: "red",
+            },
         },
-        
     }
 
     const paginationComponentOptions = {
@@ -158,9 +160,15 @@ export function Consulta() {
         selectAllRowsItemText: "Todos",
     }
 
-    const ExpandedComponent = ({ data }) => {
-        <pre>{JSON.stringify(data, null, 2)}</pre>
-        console.log(data)
+    const [records, setRecords] = useState(data)
+
+    function handleFilter(event) {
+        const newData = data.filter((row) => {
+            return row.titulo
+                .toLowerCase()
+                .includes(event.target.value.toLowerCase())
+        })
+        setRecords(newData)
     }
 
     return (
@@ -171,22 +179,24 @@ export function Consulta() {
                 </div>
                 <div className="tabela">
                     <div className="pesquisa">
-                        <input type="search" placeholder="Pesquisar" />
-                        <button>
-                            <FontAwesomeIcon
-                                className="iconNavbar"
-                                icon={faMagnifyingGlass}
+                        <form>
+                            <input
+                                type="search"
+                                placeholder="Pesquisar"
+                                onChange={handleFilter}
                             />
-                        </button>
+                            <button type="reset">x</button>
+                        </form>
                     </div>
                     <DataTable
                         columns={columns} // set as colunas
-                        data={data} // recebe os dados
+                        data={records} // recebe os dados
                         theme="solarized" // define o tema
                         customStyles={customStyles} // define estilos personalizados
                         progressPending={pending} // ativa o carregamento dos dados
                         progressComponent={<Loading />} // define mensagem para carregamento
                         paginationComponentOptions={paginationComponentOptions} // define opções de paginação
+                        // paginationResetDefaultPage={resetPaginationToggle} //opcional
                         pagination // inclui a paginação
                         fixedHeader={true} // fixa o cabeçalho
                         fixedHeaderScrollHeight="320px" // inclui uma barra de rolagem
@@ -195,7 +205,7 @@ export function Consulta() {
                         dense // reduz a altura do cabeçalho
                         expandableRows // habilita a expansão de linhas
                         expandableRowsComponent={ExpandedComponent}
-                        subHeaderAlign={Alignment.CENTER}
+                        // subHeaderComponent={subHeaderComponentMemo}
                     />
                 </div>
             </fieldset>
