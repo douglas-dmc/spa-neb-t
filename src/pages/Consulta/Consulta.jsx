@@ -1,14 +1,9 @@
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { ConsultaContainer } from "./ConsultaStyled"
 import DataTable, { createTheme } from "react-data-table-component"
 import { Loading } from "../../components/Loading/Loading"
 
 export function Consulta() {
-    const ExpandedComponent = ({ data }) => {
-        <pre>{JSON.stringify(data, null, 2)}</pre>
-        console.log(data)
-    }
-
     const columns = [
         {
             name: "TIPO",
@@ -52,26 +47,29 @@ export function Consulta() {
                 </button>
             ),
             ignoreRowClick: true,
-            allowOverflow: true,
-            button: true,
+            // allowOverflow: true,
+            button: false,
             width: "50px",
-            center: true,
+            right: true,
         },
         {
-            cell: () => (
-                <button>
+            cell: (row) => (
+                <button onClick={() => alert(row.id)}>
                     <i className="bi bi-trash-fill"></i>
                 </button>
             ),
             ignoreRowClick: true,
-            button: true,
+            button: false,
             width: "50px",
             center: true,
         },
     ]
 
-    const [data, setData] = useState()
+    const [data, setData] = useState([])
     const [pending, setPending] = useState(true)
+    const [records, setRecords] = useState([])
+
+    const [search, setSearch] = useState("")
 
     // Carrega os dados para o DataTable
     useEffect(() => {
@@ -152,6 +150,12 @@ export function Consulta() {
         },
     }
 
+    const ExpandedComponent = ({ data }) => {
+        //  <p>{data.objetivo}</p>
+        // <pre>{JSON.stringify(data, null, 2)}</pre>
+        console.log(data)
+    }
+
     const paginationComponentOptions = {
         noRowsPerPage: false,
         rowsPerPageText: "normas por página:",
@@ -160,16 +164,13 @@ export function Consulta() {
         selectAllRowsItemText: "Todos",
     }
 
-    const [records, setRecords] = useState(data)
-
-    function handleFilter(event) {
+    useMemo(() => {
         const newData = data.filter((row) => {
-            return row.titulo
-                .toLowerCase()
-                .includes(event.target.value.toLowerCase())
+            return row.titulo.toLowerCase().includes(search.toLocaleLowerCase())
         })
         setRecords(newData)
-    }
+        // }
+    }, [search, data])
 
     return (
         <ConsultaContainer>
@@ -179,14 +180,12 @@ export function Consulta() {
                 </div>
                 <div className="tabela">
                     <div className="pesquisa">
-                        <form>
-                            <input
-                                type="search"
-                                placeholder="Pesquisar"
-                                onChange={handleFilter}
-                            />
-                            <button type="reset">x</button>
-                        </form>
+                        <input
+                            type="search"
+                            placeholder="Pesquisar"
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                        />
                     </div>
                     <DataTable
                         columns={columns} // set as colunas
@@ -196,7 +195,6 @@ export function Consulta() {
                         progressPending={pending} // ativa o carregamento dos dados
                         progressComponent={<Loading />} // define mensagem para carregamento
                         paginationComponentOptions={paginationComponentOptions} // define opções de paginação
-                        // paginationResetDefaultPage={resetPaginationToggle} //opcional
                         pagination // inclui a paginação
                         fixedHeader={true} // fixa o cabeçalho
                         fixedHeaderScrollHeight="320px" // inclui uma barra de rolagem
@@ -205,7 +203,6 @@ export function Consulta() {
                         dense // reduz a altura do cabeçalho
                         expandableRows // habilita a expansão de linhas
                         expandableRowsComponent={ExpandedComponent}
-                        // subHeaderComponent={subHeaderComponentMemo}
                     />
                 </div>
             </fieldset>
