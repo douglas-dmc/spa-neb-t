@@ -89,4 +89,18 @@ export const ConsultaContainer = styled.main`
         color: #000;
         background-color: #e7e3e3;
     }
+
+    dl {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.8rem;
+    }
+
+    dl dt strong {
+        margin-left: 70px;
+        margin-bottom: 10px;
+    }
+
+    dl dd {
+        margin: 5px 5px 10px 70px;
+    }
 `

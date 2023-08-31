@@ -68,7 +68,6 @@ export function Consulta() {
     const [data, setData] = useState([])
     const [pending, setPending] = useState(true)
     const [records, setRecords] = useState([])
-
     const [search, setSearch] = useState("")
 
     // Carrega os dados para o DataTable
@@ -151,9 +150,19 @@ export function Consulta() {
     }
 
     const ExpandedComponent = ({ data }) => {
-        //  <p>{data.objetivo}</p>
-        // <pre>{JSON.stringify(data, null, 2)}</pre>
-        console.log(data)
+        // console.log(data)
+        return (
+            <>
+                <dl>
+                    <dt><strong>OBJETIVO</strong>:</dt>
+                    <dd>{data.objetivo}</dd>
+                    <dt><strong>APROVAÇÃO</strong>:</dt>
+                    <dd>BI nª {data.bi_numero}-CTEx, de {data.bi_data} </dd>
+                    <dt><strong>HOMOLOGAÇÃO</strong>:</dt>
+                    <dd>BE nº {data.be_numero}, de {data.be_data} </dd>
+                </dl>
+            </>
+        )
     }
 
     const paginationComponentOptions = {
