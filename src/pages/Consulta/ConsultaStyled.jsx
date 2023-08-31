@@ -10,6 +10,7 @@ export const ConsultaContainer = styled.main`
         justify-content: center;
         align-items: center;
         border: none;
+        max-width: 1000px;
     }
 
     .legenda {
@@ -84,6 +85,20 @@ export const ConsultaContainer = styled.main`
         border-radius: 5px;
     }
 
+    .pesquisa button {
+        background-color: var(--bg-color-button);
+        color: var(--color-font-button);
+        padding: 3px 8px;
+        border: 1px solid var(--bg-color-button);
+        border-radius: 4px;
+    }
+
+    .pesquisa button:hover {
+        background-color: var(--color-font-button);
+        color: var(--bg-color-button);
+        border-color: #fff;
+    }
+
     .rdt_TableHeadRow {
         font-weight: bold;
         color: #000;
@@ -93,6 +108,7 @@ export const ConsultaContainer = styled.main`
     dl {
         font-family: Arial, Helvetica, sans-serif;
         font-size: 0.8rem;
+        margin-top: 5px;
     }
 
     dl dt strong {
