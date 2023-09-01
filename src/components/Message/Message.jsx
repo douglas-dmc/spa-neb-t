@@ -15,7 +15,7 @@ export function Message({ type, msg }) {
 
         const timer = setTimeout(() => {
             setVisible(false)
-        }, 4000)
+        }, 3000)
 
         return () => clearTimeout(timer)
     }, [msg]) 
@@ -33,7 +33,7 @@ export function Message({ type, msg }) {
     )
 }
 
-Message.PropType = {
+Message.propTypes = {
     type: PropType.string,
     msg: PropType.string,
 }
