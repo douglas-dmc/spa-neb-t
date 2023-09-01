@@ -59,6 +59,7 @@ export const ConsultaContainer = styled.main`
         border-radius: 8px;
         font-size: 0.9rem !important;
         font-weight: bold;
+        outline: none;
     }
 
     .tabela button {
@@ -99,6 +100,14 @@ export const ConsultaContainer = styled.main`
         border-color: #fff;
     }
 
+    .btn_acao:hover {
+        color: var(--color-font-button);
+        background-color: var(--bg-color-button);
+        padding: 5px;
+        border: 1px solid var(--bg-color-button);
+        border-radius: 3px;
+    }
+
     .rdt_TableHeadRow {
         font-weight: bold;
         color: #000;
@@ -118,5 +127,9 @@ export const ConsultaContainer = styled.main`
 
     dl dd {
         margin: 5px 5px 10px 70px;
+    }
+
+    .mais {
+        margin: 0 auto;
     }
 `

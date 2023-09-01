@@ -1,5 +1,5 @@
 import { Loader, LoaderContainer } from "./LoadingStyled"
-import loading from "../../images/loading.png"
+import loading from "../../images/loading-bars.svg"
 
 export function Loading() {
     return (

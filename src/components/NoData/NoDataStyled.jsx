@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
-export const LoaderContainer = styled.main`
+export const NoDataContainer = styled.main`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 25vh;
-    width: 30vw;
+    height: 15vh;
+    width: 25vw;
     background: linear-gradient(
         to left top,
         var(--bg-color-gradiente1),
@@ -13,30 +13,21 @@ export const LoaderContainer = styled.main`
         var(--bg-color-gradiente3)
     );
 `
-export const Loader = styled.section`
+export const DataMsg = styled.section`
     padding: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    @keyframes loading {
-        from {
-            transform: rotate(0);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
-    img {
-        width: 80px;
-        animation: loading 2s linear infinite;
-        margin-bottom: 15px;
-    }
-
-    h3 {
+    p {
+        margin-left: 25px;
+        font-size: 1.1rem;
+        font-weight: bold;
         color: var(--bg-color-title-form);
     }
-`
 
+    i {
+        color: var(--bg-color-title-form);
+        font-size: 2rem;
+    }
+`

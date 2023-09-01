@@ -4,6 +4,9 @@ import DataTable, { createTheme } from "react-data-table-component"
 import { Loading } from "../../components/Loading/Loading"
 import PropTypes from "prop-types"
 import Moment from "moment"
+import { NoData } from "../../components/NoData/NoData"
+import SignPlus from "../../images/plus-square.svg"
+import SignDash from "../../images/dash-square.svg"
 
 export function Consulta() {
     const convertType = (value) => {
@@ -33,13 +36,6 @@ export function Consulta() {
         return value
     }
 
-    // const cleanUpdate = (value) => {
-    //     if (value === 'NA'){
-    //         value = '-'
-    //     }
-    //     return value
-    // }
-
     const unionNEBT = (tipo, numero, alteracao) => {
         if (!alteracao || alteracao == "NA") {
             alteracao = ""
@@ -55,18 +51,6 @@ export function Consulta() {
             selector: (row) => unionNEBT(row.tipo, row.numero, row.edicao),
             width: "110px",
         },
-        // {
-        //     name: "NÚMERO",
-        //     selector: (row) => row.numero,
-        //     width: "85px",
-        //     sortable: true,
-        //     hide: true,
-        // },
-        // {
-        //     name: "ALTERAÇÃO",
-        //     selector: (row) => cleanUpdate(row.edicao),
-        //     width: "90px",
-        // },
         {
             name: "TÍTULO",
             selector: (row) => row.titulo,
@@ -88,7 +72,7 @@ export function Consulta() {
         },
         {
             cell: () => (
-                <button>
+                <button className="btn_acao">
                     <i className="bi bi-search"></i>
                 </button>
             ),
@@ -100,7 +84,7 @@ export function Consulta() {
         },
         {
             cell: (row) => (
-                <button onClick={() => alert(row.id)}>
+                <button className="btn_acao" onClick={() => alert(row.id)}>
                     <i className="bi bi-trash-fill"></i>
                 </button>
             ),
@@ -243,7 +227,10 @@ export function Consulta() {
         const newData = data.filter((row) => {
             return (
                 row.titulo.toLowerCase().includes(search.toLocaleLowerCase()) ||
-                row.numero.toString().toLocaleLowerCase().includes(search.toLocaleLowerCase())
+                row.numero
+                    .toString()
+                    .toLocaleLowerCase()
+                    .includes(search.toLocaleLowerCase())
             )
         })
         setRecords(newData)
@@ -268,7 +255,7 @@ export function Consulta() {
                         <button onClick={() => setSearch("")}>x</button>
                     </div>
                     <DataTable
-                        columns={columns} // set as colunas
+                        columns={columns} // seta as colunas
                         data={records} // recebe os dados
                         theme="solarized" // define o tema
                         customStyles={customStyles} // define estilos personalizados
@@ -277,13 +264,18 @@ export function Consulta() {
                         paginationComponentOptions={paginationComponentOptions} // define opções de paginação
                         pagination // inclui a paginação
                         fixedHeader={true} // fixa o cabeçalho
-                        fixedHeaderScrollHeight="320px" // inclui uma barra de rolagem
-                        defaultSortFieldId={4} // define a coluna do título com padrão no carregamento da página
+                        fixedHeaderScrollHeight="40vh" // inclui uma barra de rolagem
+                        defaultSortFieldId={2} // define a coluna do título com padrão no carregamento da página
                         highlightOnHover // ativa o hover sobre as linhas
                         dense // reduz a altura do cabeçalho
                         expandableRows // habilita a expansão de linhas
                         expandableRowsComponent={ExpandedComponent}
                         expandOnRowClicked
+                        noDataComponent={<NoData />}
+                        expandableIcon={{
+                            collapsed: <img src={SignPlus} alt="mais" className="mais" />,
+                            expanded: <img src={SignDash} alt="menos" className="mais" />,
+                        }}
                     />
                 </div>
             </fieldset>

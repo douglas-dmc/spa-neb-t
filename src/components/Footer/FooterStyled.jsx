@@ -11,4 +11,8 @@ export const Foot = styled.footer`
     padding: 5px 0;
     margin: 0;
     border-top: 1px solid gray;
+
+    p:nth-child(2) {
+        margin-left: 5px;
+    }
 `
