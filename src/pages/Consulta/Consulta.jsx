@@ -2,37 +2,83 @@ import { useEffect, useMemo, useState } from "react"
 import { ConsultaContainer } from "./ConsultaStyled"
 import DataTable, { createTheme } from "react-data-table-component"
 import { Loading } from "../../components/Loading/Loading"
+import PropTypes from "prop-types"
+import Moment from "moment"
 
 export function Consulta() {
+    const convertType = (value) => {
+        switch (value) {
+            case "E":
+                value = "Especificação"
+                break
+            case "M":
+                value = "Método de Ensaio"
+                break
+            case "Pr":
+                value = "Procedimento"
+                break
+            case "Pd":
+                value = "Padronização"
+                break
+            case "C":
+                value = "Classificação"
+                break
+            case "T":
+                value = "Terminologia"
+                break
+            case "S":
+                value = "Simbologia"
+                break
+        }
+        return value
+    }
+
+    // const cleanUpdate = (value) => {
+    //     if (value === 'NA'){
+    //         value = '-'
+    //     }
+    //     return value
+    // }
+
+    const unionNEBT = (tipo, numero, alteracao) => {
+        if (!alteracao || alteracao == "NA") {
+            alteracao = ""
+        }
+        let nebt = tipo + "-" + numero.toString() + " " + alteracao
+
+        return nebt
+    }
+
     const columns = [
         {
-            name: "TIPO",
-            selector: (row) => row.tipo,
-            width: "70px",
-            center: true,
-            sortable: true,
+            name: "NEB/T",
+            selector: (row) => unionNEBT(row.tipo, row.numero, row.edicao),
+            width: "110px",
         },
-        {
-            name: "NÚMERO",
-            selector: (row) => row.numero,
-            width: "85px",
-            sortable: true,
-        },
-        {
-            name: "EDIÇÃO",
-            selector: (row) => row.edicao,
-            width: "70px",
-        },
+        // {
+        //     name: "NÚMERO",
+        //     selector: (row) => row.numero,
+        //     width: "85px",
+        //     sortable: true,
+        //     hide: true,
+        // },
+        // {
+        //     name: "ALTERAÇÃO",
+        //     selector: (row) => cleanUpdate(row.edicao),
+        //     width: "90px",
+        // },
         {
             name: "TÍTULO",
             selector: (row) => row.titulo,
-            width: "350px",
+            width: "420px",
             sortable: true,
         },
         {
-            name: "HOMOLOGAÇÃO",
-            selector: (row) => row.be_data,
-            width: "120px",
+            name: "TIPO",
+            selector: (row) => convertType(row.tipo),
+            width: "180px",
+            center: true,
+            sortable: true,
         },
         {
             name: "STATUS",
@@ -48,9 +94,9 @@ export function Consulta() {
             ),
             ignoreRowClick: true,
             // allowOverflow: true,
-            button: false,
+            // button: true,
             width: "50px",
-            right: true,
+            center: true,
         },
         {
             cell: (row) => (
@@ -59,7 +105,7 @@ export function Consulta() {
                 </button>
             ),
             ignoreRowClick: true,
-            button: false,
+            // button: true,
             width: "50px",
             center: true,
         },
@@ -148,31 +194,41 @@ export function Consulta() {
             },
         },
     }
-
-    const ExpandedComponent = ({ data }) => {
-        // console.log(data)
+    function ExpandedComponent({ data }) {
+        console.log({ data })
         return (
             <>
                 <dl>
                     <dt>
-                        <strong>OBJETIVO</strong>:
+                        <strong>OBJETIVO:</strong>
                     </dt>
                     <dd>{data.objetivo}</dd>
                     <dt>
-                        <strong>APROVAÇÃO</strong>:
+                        <strong>APROVAÇÃO:</strong>
                     </dt>
                     <dd>
-                        BI nª {data.bi_numero}-CTEx, de {data.bi_data}{" "}
+                        Boletim Interno do CTEx nº {data.bi_numero}, de{" "}
+                        {Moment(data.bi_data).format("DD/MM/YYYY")}{" "}
                     </dd>
                     <dt>
-                        <strong>HOMOLOGAÇÃO</strong>:
+                        <strong>HOMOLOGAÇÃO:</strong>
                     </dt>
                     <dd>
-                        BE nº {data.be_numero}, de {data.be_data}{" "}
+                        Boletim do Exército nº {data.be_numero}, de{" "}
+                        {Moment(data.be_data).format("DD/MM/YYYY")}{" "}
                     </dd>
                 </dl>
             </>
         )
+    }
+
+    ExpandedComponent.propTypes = {
+        data: PropTypes.object,
+        objetivo: PropTypes.string,
+        bi_numero: PropTypes.number,
+        bi_data: PropTypes.string,
+        be_numero: PropTypes.number,
+        be_data: PropTypes.string,
     }
 
     const paginationComponentOptions = {
@@ -185,7 +241,10 @@ export function Consulta() {
 
     useMemo(() => {
         const newData = data.filter((row) => {
-            return row.titulo.toLowerCase().includes(search.toLocaleLowerCase())
+            return (
+                row.titulo.toLowerCase().includes(search.toLocaleLowerCase()) ||
+                row.numero.toString().toLocaleLowerCase().includes(search.toLocaleLowerCase())
+            )
         })
         setRecords(newData)
         // }
@@ -200,11 +259,13 @@ export function Consulta() {
                 <div className="tabela">
                     <div className="pesquisa">
                         <input
-                            type="search"
+                            name="pesquisa"
+                            type="text"
                             placeholder="Pesquisar"
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
                         />
+                        <button onClick={() => setSearch("")}>x</button>
                     </div>
                     <DataTable
                         columns={columns} // set as colunas
