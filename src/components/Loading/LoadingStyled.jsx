@@ -17,8 +17,14 @@ export const LoaderContainer = styled.main`
 export const Loader = styled.section`
     padding: 20px 50px;
     display: flex;
+    flex-direction: column;
     background-color: #fff;
     justify-content: center;
     align-self: center;
+    align-items: center;
+
+    img {
+        width: 200px;
+    }
 `
 

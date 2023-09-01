@@ -5,59 +5,72 @@ import { Loading } from "../../components/Loading/Loading"
 import PropTypes from "prop-types"
 import Moment from "moment"
 
-
 export function Consulta() {
-
     const convertType = (value) => {
-        switch(value){
-            case 'E':
-                value = 'Especificação'
+        switch (value) {
+            case "E":
+                value = "Especificação"
                 break
-            case 'M':
-                value = 'Método de Ensaio'
+            case "M":
+                value = "Método de Ensaio"
                 break
-            case 'Pr':
-                value = 'Procedimento'
+            case "Pr":
+                value = "Procedimento"
                 break
-            case 'Pd':
-                value = 'Padronização'
+            case "Pd":
+                value = "Padronização"
                 break
-            case 'C':
-                value = 'Classificação'
+            case "C":
+                value = "Classificação"
                 break
-            case 'T':
-                value = 'Terminologia'
+            case "T":
+                value = "Terminologia"
                 break
-            case 'S':
-                value = 'Simbologia'
+            case "S":
+                value = "Simbologia"
                 break
         }
         return value
     }
 
-    const cleanUpdate = (value) => {
-        if (value === 'NA'){
-            value = '-'
+    // const cleanUpdate = (value) => {
+    //     if (value === 'NA'){
+    //         value = '-'
+    //     }
+    //     return value
+    // }
+
+    const unionNEBT = (tipo, numero, alteracao) => {
+        if (!alteracao || alteracao == "NA") {
+            alteracao = ""
         }
-        return value
+        let nebt = tipo + "-" + numero.toString() + " " + alteracao
+
+        return nebt
     }
 
     const columns = [
         {
-            name: "NÚMERO",
-            selector: (row) => row.numero,
-            width: "85px",
-            sortable: true,
+            name: "NEB/T",
+            selector: (row) => unionNEBT(row.tipo, row.numero, row.edicao),
+            width: "110px",
         },
-        {
-            name: "ALTERAÇÃO",
-            selector: (row) => cleanUpdate(row.edicao),
-            width: "90px",
-        },
+        // {
+        //     name: "NÚMERO",
+        //     selector: (row) => row.numero,
+        //     width: "85px",
+        //     sortable: true,
+        //     hide: true,
+        // },
+        // {
+        //     name: "ALTERAÇÃO",
+        //     selector: (row) => cleanUpdate(row.edicao),
+        //     width: "90px",
+        // },
         {
             name: "TÍTULO",
             selector: (row) => row.titulo,
-            width: "355px",
+            width: "420px",
             sortable: true,
         },
         {
@@ -181,8 +194,8 @@ export function Consulta() {
             },
         },
     }
-    function ExpandedComponent({data}){
-        console.log({data})
+    function ExpandedComponent({ data }) {
+        console.log({ data })
         return (
             <>
                 <dl>
@@ -194,13 +207,15 @@ export function Consulta() {
                         <strong>APROVAÇÃO:</strong>
                     </dt>
                     <dd>
-                        Boletim Interno do CTEx nº {data.bi_numero}, de {Moment(data.bi_data).format("DD/MM/YYYY")}{" "}
+                        Boletim Interno do CTEx nº {data.bi_numero}, de{" "}
+                        {Moment(data.bi_data).format("DD/MM/YYYY")}{" "}
                     </dd>
                     <dt>
                         <strong>HOMOLOGAÇÃO:</strong>
                     </dt>
                     <dd>
-                        Boletim do Exército nº {data.be_numero}, de {Moment(data.be_data).format("DD/MM/YYYY")}{" "}
+                        Boletim do Exército nº {data.be_numero}, de{" "}
+                        {Moment(data.be_data).format("DD/MM/YYYY")}{" "}
                     </dd>
                 </dl>
             </>
@@ -213,7 +228,7 @@ export function Consulta() {
         bi_numero: PropTypes.number,
         bi_data: PropTypes.string,
         be_numero: PropTypes.number,
-        be_data: PropTypes.string
+        be_data: PropTypes.string,
     }
 
     const paginationComponentOptions = {
@@ -226,7 +241,10 @@ export function Consulta() {
 
     useMemo(() => {
         const newData = data.filter((row) => {
-            return row.titulo.toLowerCase().includes(search.toLocaleLowerCase())
+            return (
+                row.titulo.toLowerCase().includes(search.toLocaleLowerCase()) ||
+                row.numero.toString().toLocaleLowerCase().includes(search.toLocaleLowerCase())
+            )
         })
         setRecords(newData)
         // }
@@ -247,9 +265,7 @@ export function Consulta() {
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
                         />
-                        <button onClick={() => setSearch("")}>
-                            x
-                        </button>
+                        <button onClick={() => setSearch("")}>x</button>
                     </div>
                     <DataTable
                         columns={columns} // set as colunas
@@ -274,4 +290,3 @@ export function Consulta() {
         </ConsultaContainer>
     )
 }
-
