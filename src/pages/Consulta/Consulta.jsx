@@ -154,12 +154,22 @@ export function Consulta() {
         return (
             <>
                 <dl>
-                    <dt><strong>OBJETIVO</strong>:</dt>
+                    <dt>
+                        <strong>OBJETIVO</strong>:
+                    </dt>
                     <dd>{data.objetivo}</dd>
-                    <dt><strong>APROVAÇÃO</strong>:</dt>
-                    <dd>BI nª {data.bi_numero}-CTEx, de {data.bi_data} </dd>
-                    <dt><strong>HOMOLOGAÇÃO</strong>:</dt>
-                    <dd>BE nº {data.be_numero}, de {data.be_data} </dd>
+                    <dt>
+                        <strong>APROVAÇÃO</strong>:
+                    </dt>
+                    <dd>
+                        BI nª {data.bi_numero}-CTEx, de {data.bi_data}{" "}
+                    </dd>
+                    <dt>
+                        <strong>HOMOLOGAÇÃO</strong>:
+                    </dt>
+                    <dd>
+                        BE nº {data.be_numero}, de {data.be_data}{" "}
+                    </dd>
                 </dl>
             </>
         )
@@ -212,6 +222,7 @@ export function Consulta() {
                         dense // reduz a altura do cabeçalho
                         expandableRows // habilita a expansão de linhas
                         expandableRowsComponent={ExpandedComponent}
+                        expandOnRowClicked
                     />
                 </div>
             </fieldset>
