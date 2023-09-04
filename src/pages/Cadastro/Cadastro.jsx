@@ -11,7 +11,7 @@ export function Cadastro() {
     const {
         register,
         handleSubmit,
-        // watch,
+        setValue,
         reset,
         watch,
         formState: { errors },
@@ -37,18 +37,6 @@ export function Cadastro() {
     const navigate = useNavigate()
 
     const onSubmit = (cadastros) => {
-        // let fileName = watch("arquivo[0].name")
-        // if (fileName.length > 80) {
-        //     let parte = fileName.length - 80
-        //     let subparte = fileName.substr(40, parte)
-        //     let newFileName = fileName.replace(subparte, " ... ")
-        // }
-        // if (cadastros.arquivo.length > 0){
-        //     const reader = new FileReader()
-        // }
-
-        // const arquivo = watch("arquivo")
-
         fetch("http://localhost:5000/cadastros", {
             method: "POST",
             headers: {
@@ -112,6 +100,32 @@ export function Cadastro() {
             .catch((error) => console.log(error))
     }, [])
 
+    const capitalizeString = (string) => {
+        string = string
+            .toLowerCase()
+            .split(" ")
+            .map((word) => {
+                if (
+                    word == "de" ||
+                    word == "da" ||
+                    word == "do" ||
+                    word == "mm" ||
+                    word == "para" ||
+                    word == "os" ||
+                    word == "ou" ||
+                    word == "e" ||
+                    word == "a" ||
+                    word == "o"
+                ) {
+                    return word.charAt(0).toLowerCase() + word.slice(1)
+                } else {
+                    return word.charAt(0).toUpperCase() + word.slice(1)
+                }
+            })
+
+        return string.join(" ")
+    }
+
     return (
         <CadForm>
             <fieldset>
@@ -125,6 +139,9 @@ export function Cadastro() {
                         {...register("titulo")}
                         type="text"
                         placeholder="Título"
+                        onChange={(e) =>
+                            setValue("titulo", capitalizeString(e.target.value))
+                        }
                     />
                     {errors.titulo?.message && (
                         <span>
@@ -239,15 +256,13 @@ export function Cadastro() {
                         </span>
                     )}
                     <div className="uploaderFile">
-                        <label htmlFor="uploader">
-                            Upload da norma
-                            <input
-                                {...register("arquivo")}
-                                id="uploader"
-                                type="file"
-                                accept=".pdf"
-                            />
-                        </label>
+                        <input
+                            {...register("arquivo")}
+                            id="uploader"
+                            type="file"
+                            accept=".pdf"
+                        />
+                        <label htmlFor="uploader">Upload da norma</label>
                         <input
                             type="text"
                             defaultValue={

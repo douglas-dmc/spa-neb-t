@@ -57,5 +57,6 @@ export const Nav = styled.nav`
 
     li a:hover {
         color: var(--bg-color-navbar);
+        border-bottom: 4px solid var(--bg-color-navbar);
     }
 `

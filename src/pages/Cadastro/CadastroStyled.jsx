@@ -160,23 +160,24 @@ export const CadForm = styled.main`
         grid-column-end: 5;
         grid-area: arquivo;
         background-color: var(--bg-color-components);
-        padding: 3px 4px;
+        padding: 0;
         border: 1px solid gray;
         border-radius: 4px;
         margin-top: 5px;
         display: flex;
-        align-content: center;
+        align-items: center;
     }
 
     form .uploaderFile label {
         background-color: var(--bg-color-button);
         color: var(--color-font-button);
         border: 1px solid var(--bg-color-button);
-        border-radius: 4px;
-        padding: 5px 10px;
-        margin: 0 2px;
+        border-radius: 4px 0 0 4px;
+        padding: 9px 10px;
+        margin: 0;
+        max-height: 100%;
         cursor: pointer;
-        align-self: center;
+        align-self: center; 
         transition: 0.2s;
     }
 

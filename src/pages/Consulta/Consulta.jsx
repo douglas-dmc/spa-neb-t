@@ -7,8 +7,10 @@ import Moment from "moment"
 import { NoData } from "../../components/NoData/NoData"
 import SignPlus from "../../images/plus-square.svg"
 import SignDash from "../../images/dash-square.svg"
+import { DisplayPDF } from "../../components/DisplayPDF/DisplayPDF"
 
 export function Consulta() {
+
     const convertType = (value) => {
         switch (value) {
             case "E":
@@ -54,7 +56,7 @@ export function Consulta() {
         {
             name: "TÍTULO",
             selector: (row) => row.titulo,
-            width: "420px",
+            width: "430px",
             sortable: true,
         },
         {
@@ -72,7 +74,7 @@ export function Consulta() {
         },
         {
             cell: () => (
-                <button className="btn_acao">
+                <button onClick={DisplayPDF} className="btn_acao">
                     <i className="bi bi-search"></i>
                 </button>
             ),
